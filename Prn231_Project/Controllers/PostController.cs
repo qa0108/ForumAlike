@@ -35,7 +35,7 @@ namespace Prn231_Project.Controllers
         public IActionResult Post([FromBody] Post post)
         {
             this.postRepository.Create(post);
-            return CreatedAtAction(nameof(Get), new { id = post.PostId }, post);
+            return this.CreatedAtAction(nameof(Get), new { id = post.PostId }, post);
         }
 
         [HttpPut("{id}")]

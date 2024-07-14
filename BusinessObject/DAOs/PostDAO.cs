@@ -15,8 +15,8 @@ namespace DataAccess.DAOs
 
         public void Create(Post post)
         {
-            context.Posts.Add(post);
-            context.SaveChanges();
+            this.context.Posts.Add(post);
+            this.context.SaveChanges();
         }
 
         public Post? GetById(int id)

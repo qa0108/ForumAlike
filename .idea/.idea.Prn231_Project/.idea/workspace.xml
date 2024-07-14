@@ -11,29 +11,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4764b45-f9b0-4abf-96c6-fcb109f4f8fe" name="Changes" comment="add database sql">
+    <list default="true" id="c4764b45-f9b0-4abf-96c6-fcb109f4f8fe" name="Changes" comment="modify models">
+      <change afterPath="$PROJECT_DIR$/WebClient/Controllers/PostController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebClient/Views/Post/Create.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Prn231_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Prn231_Project/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BusinessObject/DAOs/PostDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/DAOs/PostDAO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessObject/Models/Category.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessObject/Models/ForumDBContext.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessObject/Models/Post.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessObject/Models/Reply.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessObject/Models/Role.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessObject/Models/Thread.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessObject/Models/User.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Prn231_Project/Controllers/PostController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/Controllers/PostController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Views/Home/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/ref/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/ref/WebClient.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/refint/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/refint/WebClient.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +49,7 @@
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/aspnetcore/fedc545ce86467b7d3413d906f1ab02fb3db12ff/src/Mvc/Mvc.ViewFeatures/src/Controller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/e77011b31a3e5c47d931248a64b47f9b2d47853d/src/libraries/System.Private.CoreLib/src/System/Threading/Thread.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6283e3818f3f9b5bc566b82f819dbef6afa6f25fd9dbfb76e39324311139465/ODataOptions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e971f1a639e97b6c53ff6b5e399007cb64af3837af3edbcdf276d1109dafe6/ODataConventionModelBuilder.cs" root0="SKIP_HIGHLIGHTING" />
@@ -74,29 +69,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.Prn231_Project.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Launch Settings Profile.WebClient.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.Prn231_Project.executor": "Debug",
+    ".NET Launch Settings Profile.WebClient.executor": "Debug",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\PC\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\PC\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\PC\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\PC\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache",
+      "C:\\Users\\PC\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache",
+      "C:\\Users\\PC\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.WebClient">
     <configuration name="DataAccess" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -187,7 +182,7 @@
       <updated>1720896072856</updated>
       <workItem from="1720896074403" duration="1207000" />
       <workItem from="1720966273519" duration="8817000" />
-      <workItem from="1720985188875" duration="923000" />
+      <workItem from="1720985188875" duration="2538000" />
     </task>
     <task id="LOCAL-00001" summary="add gitignore">
       <option name="closed" value="true" />
@@ -245,7 +240,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720985303419</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="modify models">
+      <option name="closed" value="true" />
+      <created>1720986154526</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1720986154526</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,6 +263,39 @@
     <MESSAGE value="add odata" />
     <MESSAGE value="get post at home" />
     <MESSAGE value="add database sql" />
-    <option name="LAST_COMMIT_MESSAGE" value="add database sql" />
+    <MESSAGE value="modify models" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify models" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/BusinessObject/Repositories/Implementation/PostRepository.cs</url>
+          <line>18</line>
+          <properties documentPath="C:\Users\PC\Documents\GitHub\Prn231_Project\BusinessObject\Repositories\Implementation\PostRepository.cs" initialLine="18" containingFunctionPresentation="Method 'Create'">
+            <startOffsets>
+              <option value="455" />
+            </startOffsets>
+            <endOffsets>
+              <option value="481" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/BusinessObject/DAOs/PostDAO.cs</url>
+          <line>17</line>
+          <properties documentPath="C:\Users\PC\Documents\GitHub\Prn231_Project\BusinessObject\DAOs\PostDAO.cs" initialLine="17" containingFunctionPresentation="Method 'Create'">
+            <startOffsets>
+              <option value="364" />
+            </startOffsets>
+            <endOffsets>
+              <option value="393" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
