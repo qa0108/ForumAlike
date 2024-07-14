@@ -35,7 +35,7 @@ namespace WebClient.Controllers
 
         public async Task<List<Post>?> GetAllPosts()
         {
-            var response = await this.httpClient.GetAsync("http://localhost:5000/odata/Post");
+            var response = await this.httpClient.GetAsync("http://localhost:5000/api/Post");
 
             if (response.IsSuccessStatusCode)
             {

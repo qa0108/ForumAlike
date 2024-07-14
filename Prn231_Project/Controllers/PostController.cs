@@ -20,7 +20,7 @@ namespace Prn231_Project.Controllers
         [EnableQuery]
         public IActionResult Get()
         {
-            return Ok(this.postRepository.GetAll());
+            return this.Ok(this.postRepository.GetAll());
         }
 
         [HttpGet("{id}")]

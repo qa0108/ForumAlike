@@ -42,7 +42,7 @@ namespace DataAccess.DAOs
 
         public List<Post> GetAll()
         {
-            return context.Posts.ToList();
+            return this.context.Posts.ToList();
         }
     }
 }

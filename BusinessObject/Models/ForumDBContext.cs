@@ -57,6 +57,10 @@ namespace DataAccess.Models
 
                 entity.Property(e => e.ThreadId).HasColumnName("ThreadID");
 
+                entity.Property(e => e.Title)
+                    .HasMaxLength(255)
+                    .HasDefaultValueSql("(N'')");
+
                 entity.Property(e => e.UserId).HasColumnName("UserID");
 
                 entity.HasOne(d => d.Thread)
