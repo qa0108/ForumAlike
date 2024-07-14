@@ -1,14 +1,21 @@
-﻿@{
+﻿<!-- Update Index.cshtml -->
+@{
     ViewData["Title"] = "Home Page";
+    var posts = ViewBag.Posts as List<DataAccess.Models.Post>;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h1>All Posts</h1>
 
-
-<div>
-    <a href="User/Login">Login</a>
-    <a href="User/Register">Register</a>
-</div>
+@if (posts != null && posts.Any())
+{
+    <ul>
+        @foreach (var post in posts)
+        {
+            <li>@*@post.Title *@- @post.Content</li>
+        }
+    </ul>
+}
+else
+{
+    <p>No posts available.</p>
+}

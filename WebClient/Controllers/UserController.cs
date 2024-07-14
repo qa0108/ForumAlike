@@ -1,10 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-using System.Net;
-using WebClient.ApiModels;
-
-namespace WebClient.Controllers
+﻿namespace WebClient.Controllers
 {
+    using System.Net;
+    using DataAccess.Models;
+    using Microsoft.AspNetCore.Mvc;
+    using Newtonsoft.Json;
+
     public class UserController : Controller
     {
         private const string BaseApiLink = "http://localhost:5000/api/User";

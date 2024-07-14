@@ -67,7 +67,7 @@ namespace Prn231_Project
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-
+            
             app.UseRouting();
             app.UseAuthorization();
 
