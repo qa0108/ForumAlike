@@ -19,7 +19,7 @@ namespace DataAccess.DAOs
             context.SaveChanges();
         }
 
-        public Thread GetById(int id)
+        public Thread? GetById(int id)
         {
             return context.Threads.Find(id);
         }

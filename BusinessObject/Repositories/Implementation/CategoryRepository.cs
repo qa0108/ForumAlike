@@ -19,7 +19,7 @@ namespace DataAccess.Repositories.Implementation
             this.categoryDAO.Add(category);
         }
 
-        public Category Read(int id)
+        public Category? GetById(int id)
         {
             return this.categoryDAO.GetById(id);
         }

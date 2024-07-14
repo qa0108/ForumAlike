@@ -75,11 +75,9 @@ C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\bin\Debug\net6.0\Prn2
 C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\bin\Debug\net6.0\Prn231_Project.dll
 C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\bin\Debug\net6.0\Prn231_Project.pdb
 C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\bin\Debug\net6.0\AutoMapper.dll
-C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\bin\Debug\net6.0\Humanizer.dll
 C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
@@ -136,3 +134,14 @@ C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\obj\Debug\net6.0\refi
 C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\obj\Debug\net6.0\Prn231_Project.pdb
 C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\obj\Debug\net6.0\Prn231_Project.genruntimeconfig.cache
 C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\obj\Debug\net6.0\ref\Prn231_Project.dll
+C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\bin\Debug\net6.0\BusinessObject.deps.json
+C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\bin\Debug\net6.0\BusinessObject.runtimeconfig.json
+C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\bin\Debug\net6.0\BusinessObject.exe
+C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\bin\Debug\net6.0\Microsoft.AspNetCore.OData.dll
+C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\bin\Debug\net6.0\Microsoft.OData.Core.dll
+C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\bin\Debug\net6.0\Microsoft.OData.Edm.dll
+C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\bin\Debug\net6.0\Microsoft.OData.ModelBuilder.dll
+C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\bin\Debug\net6.0\Microsoft.Spatial.dll
+C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\bin\Debug\net6.0\BusinessObject.dll
+C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\bin\Debug\net6.0\BusinessObject.pdb

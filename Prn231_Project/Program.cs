@@ -4,7 +4,9 @@ namespace Prn231_Project
     using DataAccess.Models;
     using DataAccess.Repositories.Implementation;
     using DataAccess.Repositories.Interfaces;
+    using Microsoft.AspNetCore.OData;
     using Microsoft.EntityFrameworkCore;
+    using Microsoft.OData.ModelBuilder;
 
     public class Program
     {
@@ -13,9 +15,7 @@ namespace Prn231_Project
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
@@ -38,17 +38,38 @@ namespace Prn231_Project
             builder.Services.AddScoped<IThreadRepository, ThreadRepository>();
             builder.Services.AddScoped<IUserRepository, UserRepository>();
 
+            // Add OData services
+            builder.Services.AddControllers().AddOData(opt =>
+            {
+                var odataBuilder = new ODataConventionModelBuilder();
+                odataBuilder.EntitySet<Category>("Categories");
+                odataBuilder.EntitySet<Post>("Posts");
+                odataBuilder.EntitySet<Reply>("Replies");
+                odataBuilder.EntitySet<Role>("Roles");
+                odataBuilder.EntitySet<Thread>("Threads");
+                odataBuilder.EntitySet<User>("Users");
+
+                opt.AddRouteComponents("odata", odataBuilder.GetEdmModel())
+                    .Select()
+                    .Filter()
+                    .OrderBy()
+                    .Expand()
+                    .Count()
+                    .SetMaxTop(100);
+            });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
+                app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
 
+            app.UseRouting();
             app.UseAuthorization();
-
 
             app.MapControllers();
 

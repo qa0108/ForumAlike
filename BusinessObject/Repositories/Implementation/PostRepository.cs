@@ -19,7 +19,7 @@ namespace DataAccess.Repositories.Implementation
             this.postDAO.Create(post);
         }
 
-        public Post GetById(int id)
+        public Post? GetById(int id)
         {
             return this.postDAO.GetById(id);
         }

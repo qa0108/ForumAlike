@@ -19,7 +19,7 @@ namespace DataAccess.Repositories.Implementation
             this.roleDAO.Create(role);
         }
 
-        public Role Read(int id)
+        public Role GetById(int id)
         {
             return this.roleDAO.GetById(id);
         }

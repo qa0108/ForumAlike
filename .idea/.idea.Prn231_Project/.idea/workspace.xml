@@ -11,47 +11,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4764b45-f9b0-4abf-96c6-fcb109f4f8fe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BusinessObject/BusinessObject.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BusinessObject/DAOs/CategoryDAO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BusinessObject/DAOs/PostDAO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BusinessObject/DAOs/ReplyDAO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BusinessObject/DAOs/RoleDAO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BusinessObject/DAOs/ThreadDAO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BusinessObject/DAOs/UserDAO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BusinessObject/Repositories/Implementation/CategoryRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BusinessObject/Repositories/Implementation/PostRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BusinessObject/Repositories/Implementation/ReplyRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BusinessObject/Repositories/Implementation/RoleRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BusinessObject/Repositories/Implementation/ThreadRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BusinessObject/Repositories/Implementation/UserRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BusinessObject/Repositories/Interfaces/ICategoryRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BusinessObject/Repositories/Interfaces/IPostCategory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BusinessObject/Repositories/Interfaces/IReplyRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BusinessObject/Repositories/Interfaces/IRoleRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BusinessObject/Repositories/Interfaces/IThreadRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BusinessObject/Repositories/Interfaces/IUserRepository.cs" afterDir="false" />
+    <list default="true" id="c4764b45-f9b0-4abf-96c6-fcb109f4f8fe" name="Changes" comment="add DAOs and Repositories&#10;remove Models in WebApi project">
+      <change afterPath="$PROJECT_DIR$/Prn231_Project/Controllers/ReplyController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Prn231_Project/Controllers/RoleController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Prn231_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Prn231_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessObject/DAOs/CategoryDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/DAOs/CategoryDAO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessObject/DAOs/PostDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/DAOs/PostDAO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessObject/DAOs/ReplyDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/DAOs/ReplyDAO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessObject/DAOs/RoleDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/DAOs/RoleDAO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessObject/DAOs/ThreadDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/DAOs/ThreadDAO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessObject/DAOs/UserDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/DAOs/UserDAO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessObject/Repositories/Implementation/CategoryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/Repositories/Implementation/CategoryRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessObject/Repositories/Implementation/PostRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/Repositories/Implementation/PostRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessObject/Repositories/Implementation/ReplyRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/Repositories/Implementation/ReplyRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessObject/Repositories/Implementation/RoleRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/Repositories/Implementation/RoleRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessObject/Repositories/Implementation/ThreadRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/Repositories/Implementation/ThreadRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessObject/Repositories/Implementation/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/Repositories/Implementation/UserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessObject/Repositories/Interfaces/ICategoryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/Repositories/Interfaces/ICategoryRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessObject/Repositories/Interfaces/IPostCategory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/Repositories/Interfaces/IPostCategory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessObject/Repositories/Interfaces/IReplyRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/Repositories/Interfaces/IReplyRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessObject/Repositories/Interfaces/IRoleRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/Repositories/Interfaces/IRoleRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessObject/Repositories/Interfaces/IThreadRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/Repositories/Interfaces/IThreadRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessObject/Repositories/Interfaces/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/Repositories/Interfaces/IUserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prn231_Project/Controllers/CategoryController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/Controllers/CategoryController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prn231_Project/Controllers/PostController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/Controllers/PostController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prn231_Project/Controllers/ThreadController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/Controllers/ThreadController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Prn231_Project/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/Controllers/UserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/Models/Category.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/Models/ForumDBContext.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/Models/Post.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/Models/Reply.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/Models/Role.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/Models/Thread.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/Models/User.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Prn231_Project/Prn231_Project.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/Prn231_Project.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Prn231_Project/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.MvcApplicationPartsAssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.MvcApplicationPartsAssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.genruntimeconfig.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/ref/Prn231_Project.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/ref/Prn231_Project.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/refint/Prn231_Project.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/refint/Prn231_Project.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Prn231_Project.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Prn231_Project.csproj.nuget.dgspec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Prn231_Project.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Prn231_Project.csproj.nuget.g.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/project.assets.json" afterDir="false" />
@@ -59,13 +55,6 @@
       <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/WebClient.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/WebClient.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/WebClient.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/WebClient.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/rider.project.model.nuget.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebClient/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +78,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/e77011b31a3e5c47d931248a64b47f9b2d47853d/src/libraries/System.Private.CoreLib/src/System/Threading/Thread.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e971f1a639e97b6c53ff6b5e399007cb64af3837af3edbcdf276d1109dafe6/ODataConventionModelBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DataAccess/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/Prn231_Project/Controllers/UserController.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -214,7 +205,7 @@
       <option name="presentableId" value="Default" />
       <updated>1720896072856</updated>
       <workItem from="1720896074403" duration="1207000" />
-      <workItem from="1720966273519" duration="4372000" />
+      <workItem from="1720966273519" duration="6397000" />
     </task>
     <task id="LOCAL-00001" summary="add gitignore">
       <option name="closed" value="true" />
@@ -240,7 +231,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720896582328</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add DAOs and Repositories&#10;remove Models in WebApi project">
+      <option name="closed" value="true" />
+      <created>1720971387114</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1720971387114</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +250,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="add everything" />
     <MESSAGE value="add gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="add gitignore" />
+    <MESSAGE value="add DAOs and Repositories&#10;remove Models in WebApi project" />
+    <option name="LAST_COMMIT_MESSAGE" value="add DAOs and Repositories&#10;remove Models in WebApi project" />
   </component>
 </project>

@@ -19,7 +19,7 @@ namespace DataAccess.DAOs
             context.SaveChanges();
         }
 
-        public Reply GetById(int id)
+        public Reply? GetById(int id)
         {
             return context.Replies.Find(id);
         }

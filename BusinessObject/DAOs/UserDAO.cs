@@ -8,10 +8,7 @@ namespace DataAccess.DAOs
     {
         private readonly ForumDBContext context;
 
-        public UserDAO(ForumDBContext context)
-        {
-            this.context = context;
-        }
+        public UserDAO(ForumDBContext context) { this.context = context; }
 
         public void Create(User user)
         {
@@ -19,10 +16,7 @@ namespace DataAccess.DAOs
             context.SaveChanges();
         }
 
-        public User GetById(int id)
-        {
-            return context.Users.Find(id);
-        }
+        public User? GetById(int id) { return context.Users.Find(id); }
 
         public void Update(User user)
         {
@@ -40,9 +34,6 @@ namespace DataAccess.DAOs
             }
         }
 
-        public List<User> GetAll()
-        {
-            return context.Users.ToList();
-        }
+        public List<User> GetAll() { return context.Users.ToList(); }
     }
 }

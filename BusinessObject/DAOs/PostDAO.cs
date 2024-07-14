@@ -19,7 +19,7 @@ namespace DataAccess.DAOs
             context.SaveChanges();
         }
 
-        public Post GetById(int id)
+        public Post? GetById(int id)
         {
             return context.Posts.Find(id);
         }

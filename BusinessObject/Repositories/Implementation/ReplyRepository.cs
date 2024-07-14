@@ -19,7 +19,7 @@ namespace DataAccess.Repositories.Implementation
             this.replyDAO.Create(reply);
         }
 
-        public Reply Read(int id)
+        public Reply? GetById(int id)
         {
             return this.replyDAO.GetById(id);
         }

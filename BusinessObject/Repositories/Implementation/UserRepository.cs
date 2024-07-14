@@ -19,7 +19,7 @@ namespace DataAccess.Repositories.Implementation
             this.userDAO.Create(user);
         }
 
-        public User Read(int id)
+        public User GetById(int id)
         {
             return this.userDAO.GetById(id);
         }

@@ -19,7 +19,7 @@ namespace DataAccess.Repositories.Implementation
             this.threadDAO.Create(thread);
         }
 
-        public Thread Read(int id)
+        public Thread GetById(int id)
         {
             return this.threadDAO.GetById(id);
         }

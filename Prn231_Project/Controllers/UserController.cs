@@ -1,80 +1,56 @@
-﻿namespace Prn231_Project.Controllers
-{
-    using DataAccess.Models;
-    using Microsoft.AspNetCore.Mvc;
+﻿using DataAccess.Models;
+using DataAccess.Repositories.Interfaces;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Query;
 
+namespace Prn231_Project.Controllers
+{
     [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly ForumDBContext context;
+        private readonly IUserRepository userRepository;
 
-        public UserController(ForumDBContext context)
+        public UserController(IUserRepository userRepository)
         {
-            this.context = context;
+            this.userRepository = userRepository;
         }
 
         [HttpGet]
-        public IActionResult CheckLogin(string email, string password)
+        [EnableQuery]
+        public IActionResult Get()
         {
-            var user = this.context.Users.FirstOrDefault(u => u.Email.Equals(email)
-           && u.PasswordHash.Equals(password));
-
-            if (user == null) { return NotFound(); }
-            return Ok(user);
+            return this.Ok(this.userRepository.GetAll());
         }
 
-        [HttpGet("GetUserByEmail")]
-        public IActionResult GetUserByEmail(string email) {
-            var user = this.context.Users.FirstOrDefault(u => u.Email.Equals(email));
-
-            if (user == null) { return NotFound(); }
-            return Ok(user);
+        [HttpGet("{id:int}")]
+        public IActionResult Get(int id)
+        {
+            var user = this.userRepository.GetById(id);
+            if (user == null) return this.NotFound();
+            return this.Ok(user);
         }
 
         [HttpPost]
-        public IActionResult AddUser(User user)
+        public IActionResult Post([FromBody] User user)
         {
-            if (user == null) { return BadRequest("User cannot be null"); }
-
-            if (this.context.Users.Any(u => u.Email == user.Email))
-            {
-                return BadRequest("This email has been used");
-            }
-
-            this.context.Users.Add(user);
-            this.context.SaveChanges();
-
-            return Ok();
+            this.userRepository.Create(user);
+            return this.CreatedAtAction(nameof(Get), new { id = user.UserId }, user);
         }
 
-        [HttpPut]
-        public IActionResult UpdateUser(User user)
+        [HttpPut("{id:int}")]
+        public IActionResult Put(int id, [FromBody] User user)
         {
-            if (user == null) { return BadRequest("User cannot be null"); }
-
-            var targetUser = this.context.Users.FirstOrDefault(u => u.UserName == user.UserName);
-
-            if (targetUser == null) return BadRequest($"Cannot find user with username: {user.UserName}");
-
-            targetUser.PasswordHash = user.PasswordHash;
-            targetUser.Email = user.Email;
-            targetUser.RoleId = user.RoleId;
-            this.context.Users.Update(targetUser);
-
-            return Ok();
+            if (id != user.UserId) return this.BadRequest();
+            this.userRepository.Update(user);
+            return this.NoContent();
         }
 
-        [HttpDelete]
-        public IActionResult DeleteUser(int id)
+        [HttpDelete("{id:int}")]
+        public IActionResult Delete(int id)
         {
-            var targetUser = this.context.Users.FirstOrDefault(u => u.UserId == id);
-
-            if (targetUser == null) return BadRequest($"Cannot find user with id: {id}");
-
-            this.context.Users.Remove(targetUser);
-
-            return Ok(targetUser);
+            this.userRepository.Delete(id);
+            return this.NoContent();
         }
     }
 }

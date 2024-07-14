@@ -6,7 +6,7 @@ namespace DataAccess.Repositories.Interfaces
     public interface ICategoryRepository
     {
         void           Create(Category category);
-        Category       Read(int id);
+        Category?      GetById(int id);
         void           Update(Category category);
         void           Delete(int id);
         List<Category> GetAll();

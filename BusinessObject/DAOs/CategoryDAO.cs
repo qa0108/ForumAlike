@@ -19,7 +19,7 @@ namespace DataAccess.DAOs
             context.SaveChanges();
         }
 
-        public Category GetById(int id)
+        public Category? GetById(int id)
         {
             return context.Categories.Find(id);
         }

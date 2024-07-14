@@ -19,7 +19,7 @@ namespace DataAccess.DAOs
             context.SaveChanges();
         }
 
-        public Role GetById(int id)
+        public Role? GetById(int id)
         {
             return context.Roles.Find(id);
         }
