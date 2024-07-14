@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Prn231_Project.Models
+namespace DataAccess.Models
 {
     public partial class Category
     {

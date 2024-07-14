@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace Prn231_Project.Models
+namespace DataAccess.Models
 {
     public partial class ForumDBContext : DbContext
     {
@@ -28,7 +28,7 @@ namespace Prn231_Project.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=localhost;Database=ForumDB;Trusted_Connection=False;User ID=sa;Password=123");
+                optionsBuilder.UseSqlServer("Server=(local);Database=ForumDB;User Id=sa;Password=123;");
             }
         }
 
@@ -62,12 +62,12 @@ namespace Prn231_Project.Models
                 entity.HasOne(d => d.Thread)
                     .WithMany(p => p.Posts)
                     .HasForeignKey(d => d.ThreadId)
-                    .HasConstraintName("FK__Posts__ThreadID__44FF419A");
+                    .HasConstraintName("FK__Posts__ThreadID__45F365D3");
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.Posts)
                     .HasForeignKey(d => d.UserId)
-                    .HasConstraintName("FK__Posts__UserID__45F365D3");
+                    .HasConstraintName("FK__Posts__UserID__46E78A0C");
             });
 
             modelBuilder.Entity<Reply>(entity =>
@@ -87,17 +87,17 @@ namespace Prn231_Project.Models
                 entity.HasOne(d => d.ParentReply)
                     .WithMany(p => p.InverseParentReply)
                     .HasForeignKey(d => d.ParentReplyId)
-                    .HasConstraintName("FK__Replies__ParentR__4BAC3F29");
+                    .HasConstraintName("FK__Replies__ParentR__47DBAE45");
 
                 entity.HasOne(d => d.Post)
                     .WithMany(p => p.Replies)
                     .HasForeignKey(d => d.PostId)
-                    .HasConstraintName("FK__Replies__PostID__49C3F6B7");
+                    .HasConstraintName("FK__Replies__PostID__48CFD27E");
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.Replies)
                     .HasForeignKey(d => d.UserId)
-                    .HasConstraintName("FK__Replies__UserID__4AB81AF0");
+                    .HasConstraintName("FK__Replies__UserID__49C3F6B7");
             });
 
             modelBuilder.Entity<Role>(entity =>
@@ -124,12 +124,12 @@ namespace Prn231_Project.Models
                 entity.HasOne(d => d.Category)
                     .WithMany(p => p.Threads)
                     .HasForeignKey(d => d.CategoryId)
-                    .HasConstraintName("FK__Threads__Categor__403A8C7D");
+                    .HasConstraintName("FK__Threads__Categor__4AB81AF0");
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.Threads)
                     .HasForeignKey(d => d.UserId)
-                    .HasConstraintName("FK__Threads__UserID__412EB0B6");
+                    .HasConstraintName("FK__Threads__UserID__4BAC3F29");
             });
 
             modelBuilder.Entity<User>(entity =>
@@ -151,7 +151,7 @@ namespace Prn231_Project.Models
                 entity.HasOne(d => d.Role)
                     .WithMany(p => p.Users)
                     .HasForeignKey(d => d.RoleId)
-                    .HasConstraintName("FK__Users__RoleID__398D8EEE");
+                    .HasConstraintName("FK__Users__RoleID__4CA06362");
             });
 
             OnModelCreatingPartial(modelBuilder);

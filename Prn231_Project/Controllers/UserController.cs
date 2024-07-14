@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Prn231_Project.Models;
-
-namespace Prn231_Project.Controllers
+﻿namespace Prn231_Project.Controllers
 {
+    using DataAccess.Models;
+    using Microsoft.AspNetCore.Mvc;
+
     [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase
