@@ -11,50 +11,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4764b45-f9b0-4abf-96c6-fcb109f4f8fe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Prn231_Project/Config.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Prn231_Project/DTOs/UserLoginDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Prn231_Project/Services/UserService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebClient/Config.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebClient/Views/Home/TestAuthen.cshtml" afterDir="false" />
+    <list default="true" id="c4764b45-f9b0-4abf-96c6-fcb109f4f8fe" name="Changes" comment="login with jwt token and create a post">
+      <change afterPath="$PROJECT_DIR$/WebClient/Controllers/ThreadController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebClient/Views/Thread/Create.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Prn231_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Prn231_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessObject/DAOs/UserDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/DAOs/UserDAO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessObject/Models/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/Models/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessObject/Repositories/Implementation/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/Repositories/Implementation/UserRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessObject/Repositories/Interfaces/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/Repositories/Interfaces/IUserRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/Controllers/UserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/Prn231_Project.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/Prn231_Project.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/ref/Prn231_Project.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/ref/Prn231_Project.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/refint/Prn231_Project.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/refint/Prn231_Project.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Prn231_Project.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Prn231_Project.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/rider.project.restore.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/Controllers/PostController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Controllers/PostController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Controllers/UserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Views/Home/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebClient/Views/Post/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Views/Post/Create.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/ref/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/ref/WebClient.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/refint/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/refint/WebClient.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/rider.project.model.nuget.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -267,7 +228,7 @@
       <workItem from="1720985188875" duration="3149000" />
       <workItem from="1721048898655" duration="6088000" />
       <workItem from="1721064656725" duration="3241000" />
-      <workItem from="1721067923802" duration="2531000" />
+      <workItem from="1721067923802" duration="3311000" />
     </task>
     <task id="LOCAL-00001" summary="add gitignore">
       <option name="closed" value="true" />
@@ -341,7 +302,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720987741284</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="login with jwt token and create a post">
+      <option name="closed" value="true" />
+      <created>1721073409515</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1721073409515</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,7 +327,8 @@
     <MESSAGE value="add database sql" />
     <MESSAGE value="modify models" />
     <MESSAGE value="create post with form" />
-    <option name="LAST_COMMIT_MESSAGE" value="create post with form" />
+    <MESSAGE value="login with jwt token and create a post" />
+    <option name="LAST_COMMIT_MESSAGE" value="login with jwt token and create a post" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

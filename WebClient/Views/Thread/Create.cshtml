@@ -1,0 +1,21 @@
+@{
+    ViewBag.Title = "title";
+    Layout        = "_Layout";
+}
+@model DataAccess.Models.Thread
+
+<h2>title</h2>
+
+<form asp-action="Create" asp-controller="Thread" method="post">
+    <div class="form-group">
+        <label asp-for="Title"></label>
+        <input asp-for="Title" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Add Thread</button>
+</form>
+@if (ViewBag.WarningMessage != null)
+{
+    <div class="alert alert-warning">
+        @ViewBag.WarningMessage
+    </div>
+}
