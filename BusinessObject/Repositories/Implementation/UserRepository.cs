@@ -19,9 +19,17 @@ namespace DataAccess.Repositories.Implementation
             this.userDAO.Create(user);
         }
 
-        public User GetById(int id)
+        public User? GetById(int id)
         {
             return this.userDAO.GetById(id);
+        }
+        public User? FindUserByUsername(string username)
+        {
+            return this.userDAO.FindUserByUsername(username);
+        }
+        public User? FindUserByEmail(string email)
+        {
+            return this.userDAO.FindUseByEmail(email);
         }
 
         public void Update(User user)

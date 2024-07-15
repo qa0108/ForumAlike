@@ -5,23 +5,29 @@ using Microsoft.AspNetCore.OData.Query;
 
 namespace Prn231_Project.Controllers
 {
+    using System.IdentityModel.Tokens.Jwt;
+    using System.Security.Claims;
+    using System.Text;
+    using Microsoft.IdentityModel.Tokens;
+    using Prn231_Project.DTOs;
+    using Prn231_Project.Services;
+
     [Route("api/[controller]")]
     [ApiController]
     public class UserController : ControllerBase
     {
         private readonly IUserRepository userRepository;
+        private readonly UserService     userService;
 
-        public UserController(IUserRepository userRepository)
+        public UserController(IUserRepository userRepository, UserService userService)
         {
             this.userRepository = userRepository;
+            this.userService    = userService;
         }
 
         [HttpGet]
         [EnableQuery]
-        public IActionResult Get()
-        {
-            return this.Ok(this.userRepository.GetAll());
-        }
+        public IActionResult Get() { return this.Ok(this.userRepository.GetAll()); }
 
         [HttpGet("{id:int}")]
         public IActionResult Get(int id)
@@ -51,6 +57,32 @@ namespace Prn231_Project.Controllers
         {
             this.userRepository.Delete(id);
             return this.NoContent();
+        }
+
+        [HttpPost("login")]
+        public IActionResult Login([FromBody] UserLoginDto userLogin)
+        {
+            var user         = this.userService.ValidateUser(userLogin.Email, userLogin.Password);
+
+            if (user == null) return this.Unauthorized();
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key          = Encoding.UTF8.GetBytes(Config.JWT_SECRET_KEY);
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(new Claim[]
+                {
+                    new(ClaimTypes.Name, user.UserName),
+                    new(ClaimTypes.Role, user.RoleId.ToString()),
+                    new(ClaimTypes.Email, user.Email)
+                }),
+                Expires            = DateTime.UtcNow.AddDays(7),
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+            };
+            var token       = tokenHandler.CreateToken(tokenDescriptor);
+            var tokenString = tokenHandler.WriteToken(token);
+
+            return this.Ok(new { Token = tokenString });
+
         }
     }
 }

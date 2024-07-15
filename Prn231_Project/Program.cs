@@ -1,12 +1,16 @@
 namespace Prn231_Project
 {
+    using System.Text;
     using DataAccess.DAOs;
     using DataAccess.Models;
     using DataAccess.Repositories.Implementation;
     using DataAccess.Repositories.Interfaces;
+    using Microsoft.AspNetCore.Authentication.JwtBearer;
     using Microsoft.AspNetCore.OData;
     using Microsoft.EntityFrameworkCore;
+    using Microsoft.IdentityModel.Tokens;
     using Microsoft.OData.ModelBuilder;
+    using Prn231_Project.Services;
 
     public class Program
     {
@@ -14,6 +18,22 @@ namespace Prn231_Project
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Services.AddAuthentication(options =>
+                {
+                    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                    options.DefaultChallengeScheme    = JwtBearerDefaults.AuthenticationScheme;
+                })
+                .AddJwtBearer(options =>
+                {
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateIssuerSigningKey = true,
+                        IssuerSigningKey         = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("YourSecretKeyHere")),
+                        ValidateIssuer           = false,
+                        ValidateAudience         = false
+                    };
+                });
+            
             // Add services to the container.
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
@@ -56,8 +76,21 @@ namespace Prn231_Project
                     .Expand()
                     .Count()
                     .SetMaxTop(100);
-            });
+            }).AddJsonOptions(options =>
+            {
+                // Use camel case property names in JSON
+                options.JsonSerializerOptions.PropertyNamingPolicy = System.Text.Json.JsonNamingPolicy.CamelCase;
 
+                // Ignore null values in JSON output
+                options.JsonSerializerOptions.IgnoreNullValues = true;
+
+                // Configure date format, etc.
+                options.JsonSerializerOptions.Converters.Add(new System.Text.Json.Serialization.JsonStringEnumConverter());
+                // Add any other necessary configuration as per your requirements
+            });
+            
+            builder.Services.AddScoped<UserService>();
+            
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -69,6 +102,7 @@ namespace Prn231_Project
             }
             
             app.UseRouting();
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.MapControllers();

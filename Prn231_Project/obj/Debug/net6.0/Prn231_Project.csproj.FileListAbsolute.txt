@@ -145,3 +145,5 @@ C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\bin\Debug\net6.0\Micr
 C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\bin\Debug\net6.0\Microsoft.Spatial.dll
 C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\bin\Debug\net6.0\BusinessObject.dll
 C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\bin\Debug\net6.0\BusinessObject.pdb
+C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll

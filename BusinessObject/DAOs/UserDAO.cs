@@ -18,6 +18,16 @@ namespace DataAccess.DAOs
 
         public User? GetById(int id) { return context.Users.Find(id); }
 
+        public User? FindUserByUsername(string username)
+        {
+            return this.context.Users.FirstOrDefault(u => u.UserName == username);
+        }
+
+        public User? FindUseByEmail(string email)
+        {
+            return this.context.Users.FirstOrDefault(u => u.Email == email);
+        }
+
         public void Update(User user)
         {
             context.Users.Update(user);

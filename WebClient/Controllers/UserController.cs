@@ -1,50 +1,53 @@
 ﻿namespace WebClient.Controllers
 {
     using System.Net;
+    using System.Text;
     using DataAccess.Models;
     using Microsoft.AspNetCore.Mvc;
     using Newtonsoft.Json;
 
     public class UserController : Controller
     {
-        private const string BaseApiLink = "http://localhost:5000/api/User";
+        private readonly HttpClient httpClient;
+        
+        private const    string     BaseApiLink = "http://localhost:5000/api/User";
 
+        public UserController(HttpClient httpClient) { this.httpClient = httpClient; }
+        
         public IActionResult Index()
         {
-            return RedirectToAction(nameof(Login));
+            return this.RedirectToAction(nameof(Login));
         }
 
-        public IActionResult Login(string message = "")
+        [HttpGet]
+        public IActionResult Login()
         {
-            ViewBag.Message = message;
-            return View();
+            return this.View();
         }
-
-        [HttpPost]  
+        
+        [HttpPost]
         public async Task<IActionResult> Login(string email, string password)
         {
-            string link = BaseApiLink + $"/GetUserByEmail?email={email}";
-            using (HttpClient client = new HttpClient())
+            var loginDto    = new { Email = email, Password = password };
+            var jsonContent = JsonConvert.SerializeObject(loginDto);
+            var content     = new StringContent(jsonContent, Encoding.UTF8, "application/json");
+
+            var response = await this.httpClient.PostAsync("http://localhost:5000/api/User/login", content);
+
+            if (response.IsSuccessStatusCode)
             {
-                using (HttpResponseMessage res = await client.GetAsync(link))
-                {
-                    using (HttpContent content = res.Content)
-                    {
-                        string data = content.ReadAsStringAsync().Result;
-                        var user = JsonConvert.DeserializeObject<User>(data);
-                        if (user != null && user.PasswordHash == password) {
-                            return RedirectToAction("Index", "Home");
-                        }
-                    }
-                }
+                var responseString = await response.Content.ReadAsStringAsync();
+                var token          = JsonConvert.DeserializeObject<dynamic>(responseString)?.token;
+                this.Response.Cookies.Append("AuthToken", token.ToString(), new CookieOptions { HttpOnly = true, Secure = true });
+                return this.RedirectToAction("Index", "Home");
             }
 
-            return View();
+            return this.View("Error");
         }
 
         public IActionResult Register()
         {
-            return View();
+            return this.View();
         }
 
         [HttpPost]
@@ -52,22 +55,21 @@
         {
             user.CreatedAt = DateTime.Now;
             user.RoleId = 3;
-            var isRegiserSucceeded = await this.RegisterPostAsync(user);
-            if (isRegiserSucceeded)
+            var isRegisterSucceeded = await this.RegisterPostAsync(user);
+            if (isRegisterSucceeded)
             {
-                return RedirectToAction("Login");
+                return this.RedirectToAction("Login");
             }
 
-            return RedirectToAction("Register");
+            return this.RedirectToAction("Register");
         }
 
         public async Task<bool> RegisterPostAsync(User user)
         {
-            var link = "http://localhost:5000/api/User/";
+            const string link = "http://localhost:5000/api/User/";
 
-            using (HttpClient client = new HttpClient())
             {
-                using (HttpResponseMessage res = await client.PostAsJsonAsync(link, user))
+                using (var res = await this.httpClient.PostAsJsonAsync(link, user))
                 {
                     if (res.StatusCode == HttpStatusCode.OK)
                     {
