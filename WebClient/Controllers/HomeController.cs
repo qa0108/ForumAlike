@@ -10,21 +10,27 @@ namespace WebClient.Controllers
     using System.Security.Claims;
     using System.Text;
     using Microsoft.IdentityModel.Tokens;
+    using WebClient.Services;
 
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> logger;
         private readonly HttpClient              httpClient;
+        private readonly UserValidateService     userValidateService;
 
-        public HomeController(ILogger<HomeController> logger, HttpClient httpClient)
+        public HomeController(ILogger<HomeController> logger,
+            HttpClient httpClient,
+            UserValidateService userValidateService)
         {
-            this.logger     = logger;
-            this.httpClient = httpClient;
+            this.logger              = logger;
+            this.httpClient          = httpClient;
+            this.userValidateService = userValidateService;
         }
 
         // Update HomeController.cs
         public async Task<IActionResult> Index()
         {
+            this.ViewBag.IsAuthenticated = this.userValidateService.IsUserAuthenticate();
             var posts                             = await this.GetAllPosts();
             if (posts != null) this.ViewBag.Posts = posts;
             return this.View();
@@ -33,10 +39,7 @@ namespace WebClient.Controllers
         public IActionResult Privacy() { return this.View(); }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return this.View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? this.HttpContext.TraceIdentifier });
-        }
+        public IActionResult Error() { return this.View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? this.HttpContext.TraceIdentifier }); }
 
         [HttpGet]
         public IActionResult TestAuthen()

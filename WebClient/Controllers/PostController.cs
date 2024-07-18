@@ -1,35 +1,41 @@
 // WebClient/Controllers/PostController.cs
 
-using Microsoft.AspNetCore.Mvc;
-using DataAccess.Models;
-using Newtonsoft.Json;
-using System.Text;
 using Thread = DataAccess.Models.Thread;
 
 namespace WebClient.Controllers
 {
-    using System.IdentityModel.Tokens.Jwt;
     using System.Security.Claims;
-    using Microsoft.IdentityModel.Tokens;
+    using System.Text;
+    using DataAccess.Models;
+    using Microsoft.AspNetCore.Mvc;
+    using Newtonsoft.Json;
+    using WebClient.Services;
 
     public class PostController : Controller
     {
-        private readonly HttpClient httpClient;
+        private readonly HttpClient          httpClient;
+        private readonly UserValidateService userValidateService;
 
-        public PostController(HttpClient httpClient) { this.httpClient = httpClient; }
+        public PostController(HttpClient httpClient, 
+            UserValidateService userValidateService)
+        {
+            this.httpClient          = httpClient;
+            this.userValidateService = userValidateService;
+        }
 
         [HttpGet]
         public async Task<IActionResult> Create(string message)
         {
-            var claimsPrincipal = this.GetClaimPrincipal();
+            var claimsPrincipal = this.userValidateService.GetClaimPrincipal();
             if (claimsPrincipal == null)
             {
                 return this.RedirectToAction("Login", "User");
             }
 
             var threads = await this.GetThreads();
-            this.ViewBag.Threads        = threads;
-            this.ViewBag.WarningMessage = message;
+            this.ViewBag.Threads         = threads;
+            this.ViewBag.WarningMessage  = message;
+            this.ViewBag.IsAuthenticated = this.userValidateService.IsUserAuthenticate();
             return this.View();
         }
 
@@ -37,12 +43,13 @@ namespace WebClient.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(Post newPost)
         {
+            this.ViewBag.IsAuthenticated = this.userValidateService.IsUserAuthenticate();
             if (newPost.PostId == 0)
             {
-                return this.RedirectToAction("Create",new { message = "Select a thread" });
+                return this.RedirectToAction("Create", new { message = "Select a thread" });
             }
             
-            var claimPrincipal = this.GetClaimPrincipal();
+            var claimPrincipal = this.userValidateService.GetClaimPrincipal();
             var userId         = claimPrincipal?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             newPost.UserId    = int.Parse(userId);
             newPost.CreatedAt = DateTime.Now;
@@ -55,38 +62,9 @@ namespace WebClient.Controllers
             {
                 return this.RedirectToAction("Index", "Home");
             }
+            
 
             return this.View("Error");
-        }
-
-        public ClaimsPrincipal? GetClaimPrincipal()
-        {
-            var token = this.HttpContext.Request.Cookies["AuthToken"];
-            if (string.IsNullOrEmpty(token))
-            {
-                return null;
-            }
-
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var validationParameters = new TokenValidationParameters
-            {
-                ValidateIssuerSigningKey = true,
-                IssuerSigningKey         = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Config.JWT_SECRET_KEY)),
-                ValidateIssuer           = false,
-                ValidateAudience         = false,
-                // Set clock skew to zero so tokens expire exactly at token expiration time (instead of 5 minutes later)
-                ClockSkew = TimeSpan.Zero
-            };
-
-            try
-            {
-                var principal = tokenHandler.ValidateToken(token, validationParameters, out var validatedToken);
-                return principal;
-            }
-            catch (SecurityTokenException)
-            {
-                return null;
-            }
         }
 
 

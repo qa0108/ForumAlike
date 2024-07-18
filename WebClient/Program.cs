@@ -1,5 +1,7 @@
 namespace WebClient
 {
+    using WebClient.Services;
+
     public class Program
     {
         public static void Main(string[] args)
@@ -10,6 +12,9 @@ namespace WebClient
             builder.Services.AddControllersWithViews();
             builder.Services.AddControllers();
             builder.Services.AddHttpClient();
+
+            builder.Services.AddHttpContextAccessor();
+            builder.Services.AddScoped<UserValidateService>();
 
             var app = builder.Build();
 

@@ -4,6 +4,7 @@
     var posts = ViewBag.Posts as List<DataAccess.Models.Post>;
 }
 
+<body>
 <h1>All Posts</h1>
 
 @if (posts != null && posts.Any())
@@ -20,5 +21,6 @@ else
     <p>No posts available.</p>
 }
 
-<a href="/User/Login/">Login</a> 
 <a href="/Post/Create/">Create post</a>
+
+</body>
