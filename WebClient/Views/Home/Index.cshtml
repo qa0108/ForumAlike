@@ -12,7 +12,7 @@
     <ul>
         @foreach (var post in posts)
         {
-            <li>@post.Title</li>
+            <li> <a href="/Post/Detail/?postId=@post.PostId">@post.Title</a></li>
         }
     </ul>
 }

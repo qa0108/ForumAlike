@@ -1,0 +1,33 @@
+@{
+    Layout = "_Layout";
+    var posts = ViewBag.OwnPosts as List<DataAccess.Models.Post>;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<div>
+    @if (posts != null && posts.Any())
+    {
+        <ul>
+            @foreach (var post in posts)
+            {
+                <li>
+                    <a href="Detail/?postId=@post.PostId">@post.Title</a>
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>No posts available.</p>
+    }
+
+    <a href="./Create">Create post</a>
+</div>
+</body>
+</html>

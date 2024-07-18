@@ -74,7 +74,7 @@ namespace Prn231_Project.Controllers
                     new(ClaimTypes.Name, user.UserName),
                     new(ClaimTypes.Role, user.RoleId.ToString()),
                     new(ClaimTypes.Email, user.Email),
-                    new("UserId", user.UserId.ToString())
+                    new(ClaimTypes.NameIdentifier, user.UserId.ToString())
                 }),
                 Expires            = DateTime.UtcNow.AddDays(7),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)

@@ -30,14 +30,15 @@
             </div>
         </div>
 
-        @if (ViewBag.IsAuthenticated != null && !ViewBag.IsAuthenticated)
-        {
-            <p><a href="/User/ViewProfile/">ViewProfile</a></p>
-        }
-        else
+        @if (ViewBag.IsAuthenticated == null || !ViewBag.IsAuthenticated)
         {
             <p><a href="/User/Login/">Login</a></p>
             <p><a href="/User/Register/">Register</a></p>
+        }
+        else
+        {
+            <p><a href="/User/ViewProfile/">ViewProfile</a></p>
+            <p><a href="/User/Logout/">Logout</a></p>
         }
         
     </nav>

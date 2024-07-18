@@ -17,7 +17,7 @@
 
         private const string BaseApiLink = "http://localhost:5000/api/User";
 
-        public UserController(HttpClient httpClient, 
+        public UserController(HttpClient httpClient,
             UserValidateService userValidateService)
         {
             this.httpClient          = httpClient;
@@ -62,7 +62,7 @@
                 return this.RedirectToAction("Login");
             }
 
-            return this.RedirectToAction("Register");
+            return this.RedirectToAction("RegisterPost");
         }
 
         [HttpGet]
@@ -79,7 +79,14 @@
             this.ViewBag.IsAuthenticated = this.userValidateService.IsUserAuthenticate();
             this.ViewBag.User            = user;
 
-            return this.View("Error");
+            return this.View();
+        }
+
+        [HttpGet]
+        public IActionResult Logout()
+        {
+            this.Response.Cookies.Delete("AuthToken");
+            return this.RedirectToAction("Login");
         }
 
         private async Task<User?> GetUserById(int id)

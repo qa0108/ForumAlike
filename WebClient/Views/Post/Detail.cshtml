@@ -1,0 +1,23 @@
+@{
+    Layout = "_Layout";
+    var post = ViewBag.Post as DataAccess.Models.Post;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+@if (post != null)
+{
+    <div>
+        <h3>@post.Title</h3>
+    </div>   
+    <div>
+        <p>@post.Content</p>
+    </div>
+}
+</body>
+</html>
