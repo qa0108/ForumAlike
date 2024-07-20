@@ -17,9 +17,11 @@ body {
   margin-bottom: 60px;
 }
 
-.link-spacing {
+.div-spacing {
   margin-right: 5px;
   margin-left: 5px;
+  position: relative;
+  z-index: 1;
 }
 
 .plain-text-link {
@@ -36,4 +38,27 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.div-spacing {
+  /* Ensure there's no overflow: hidden; that might clip the menu */
+}
+
+.profile-menu {
+  display: none; /* Hidden by default */
+  position: fixed; /* Keep it fixed on scroll */
+  top: 60px; /* Adjust this value based on the actual height of your navbar */
+  right: 0; /* Align to the left side of the viewport */
+  width: 160px; /* Optional: Adjust the width as needed */
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1050; /* Ensure it's above most other content */
+}
+
+.profile-menu a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }

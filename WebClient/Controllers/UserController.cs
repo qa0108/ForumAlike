@@ -109,13 +109,13 @@
                     if (user != null)
                     {
                         var posts = await this.postService.GetPostsByUserIdAsync(user.UserId);
-                        this.ViewBag.Posts = posts;
+                        this.ViewBag.Posts   = posts;
                         this.ViewBag.Replies = null;
                     }
 
                     break;
                 }
-                
+
                 case 2:
                     if (user != null)
                     {
@@ -126,6 +126,7 @@
 
                     break;
             }
+
             this.ViewBag.IsAuthenticated = this.userValidateService.IsUserAuthenticated();
             this.ViewBag.User            = user;
 
@@ -165,6 +166,12 @@
             }
 
             return false;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> ChangeProfile()
+        {
+            return this.View();
         }
     }
 }

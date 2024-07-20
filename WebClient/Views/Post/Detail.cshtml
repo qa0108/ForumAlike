@@ -19,7 +19,7 @@
         <h2>@post?.Title</h2>
         @if (ViewBag.IsOwner != null && ViewBag.IsOwner)
         {
-            <div class="div-right-align" style="margin-bottom: 15px; margin-top: 15px">
+            <div class="text-right-align" style="margin-bottom: 15px; margin-top: 15px">
                 <a class="btn-primary btn" href="/Post/Modify/?postId=@post.PostId">Modify</a>
                 <a class="btn-danger btn" id="deletePostButton">Delete</a>
             </div>
@@ -34,7 +34,7 @@
         <div class="form-group">
             <textarea class="form-control rounded-textarea" id="Content" name="Content" placeholder="Add a comment"></textarea>
         </div>
-        <div class="div-right-align">
+        <div class="text-right-align">
             <button type="submit" class="btn btn-primary btn-sm">Post Comment</button>
         </div>
     </form>
