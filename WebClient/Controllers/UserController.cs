@@ -27,7 +27,11 @@
         public IActionResult Index() { return this.RedirectToAction(nameof(Login)); }
 
         [HttpGet]
-        public IActionResult Login() { return this.View(); }
+        public IActionResult Login()
+        {
+            if (this.userValidateService.IsUserAuthenticated()) return this.RedirectToAction("Index", "Home");
+            return this.View();
+        }
 
         [HttpPost]
         public async Task<IActionResult> Login(string email, string password)
@@ -49,7 +53,12 @@
             return this.View("Error");
         }
 
-        public IActionResult Register() { return this.View(); }
+        [HttpGet]
+        public IActionResult Register()
+        {
+            if (this.userValidateService.IsUserAuthenticated()) return this.RedirectToAction("Index", "Home");
+            return this.View();
+        }
 
         [HttpPost]
         public async Task<IActionResult> RegisterPost(User user)
@@ -76,7 +85,7 @@
             }
 
             var user = this.GetUserById(int.Parse(userId));
-            this.ViewBag.IsAuthenticated = this.userValidateService.IsUserAuthenticate();
+            this.ViewBag.IsAuthenticated = this.userValidateService.IsUserAuthenticated();
             this.ViewBag.User            = user;
 
             return this.View();
@@ -85,6 +94,7 @@
         [HttpGet]
         public IActionResult Logout()
         {
+            if (!this.userValidateService.IsUserAuthenticated()) return this.RedirectToAction("Index", "Home");
             this.Response.Cookies.Delete("AuthToken");
             return this.RedirectToAction("Login");
         }

@@ -9,10 +9,7 @@ public class UserValidateService
 {
     private readonly IHttpContextAccessor httpContextAccessor;
 
-    public UserValidateService(IHttpContextAccessor  httpContextAccessor)
-    {
-        this.httpContextAccessor = httpContextAccessor;
-    }
+    public UserValidateService(IHttpContextAccessor httpContextAccessor) { this.httpContextAccessor = httpContextAccessor; }
 
     public ClaimsPrincipal? GetClaimPrincipal()
     {
@@ -44,10 +41,16 @@ public class UserValidateService
         }
     }
 
-    public bool IsUserAuthenticate()
+    public bool IsUserAuthenticated()
     {
         var claimPrincipal = this.GetClaimPrincipal();
         var userId         = claimPrincipal?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
         return userId != null;
+    }
+
+    public int? GetUserId()
+    {
+        var userId = GetClaimPrincipal()?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+        return userId != null ? int.Parse(userId) : (int?)null;
     }
 }

@@ -14,4 +14,8 @@
     <ProjectReference Include="..\BusinessObject\BusinessObject.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\css\PostDetail.css" />
+  </ItemGroup>
+
 </Project>

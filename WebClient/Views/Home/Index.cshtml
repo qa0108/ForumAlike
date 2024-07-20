@@ -1,5 +1,4 @@
-﻿<!-- Update Index.cshtml -->
-@{
+﻿@{
     ViewData["Title"] = "Home Page";
     var posts = ViewBag.Posts as List<DataAccess.Models.Post>;
 }
@@ -12,7 +11,12 @@
     <ul>
         @foreach (var post in posts)
         {
-            <li> <a href="/Post/Detail/?postId=@post.PostId">@post.Title</a></li>
+            <li class="no-bullets">
+                <a href="/Post/Detail/?postId=@post.PostId" class="plain-text-link">
+                    <h3 class="font-weight-bold">@post.Title</h3>
+                </a>
+                <p>@post.Content</p>
+            </li>
         }
     </ul>
 }
@@ -20,7 +24,5 @@ else
 {
     <p>No posts available.</p>
 }
-
-<a href="/Post/Create/">Create post</a>
 
 </body>

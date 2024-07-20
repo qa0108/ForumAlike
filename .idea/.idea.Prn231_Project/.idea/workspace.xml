@@ -12,21 +12,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4764b45-f9b0-4abf-96c6-fcb109f4f8fe" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/WebClient/Services/PostService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebClient/Views/Post/Modify.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebClient/wwwroot/css/PostDetail.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Prn231_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Prn231_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessObject/DAOs/ReplyDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/DAOs/ReplyDAO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Controllers/HomeController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebClient/Controllers/PostController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Controllers/PostController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Controllers/UserController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/Services/UserValidateService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Services/UserValidateService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Views/Home/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebClient/Views/Post/Detail.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Views/Post/Detail.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/WebClient.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/WebClient.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.staticwebassets.runtime.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.staticwebassets.runtime.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/ref/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/ref/WebClient.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/refint/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/refint/WebClient.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/staticwebassets.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/staticwebassets.build.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/staticwebassets.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/staticwebassets.development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/staticwebassets.pack.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/staticwebassets.pack.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/staticwebassets/msbuild.WebClient.Microsoft.AspNetCore.StaticWebAssets.props" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/staticwebassets/msbuild.WebClient.Microsoft.AspNetCore.StaticWebAssets.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/wwwroot/css/site.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +48,13 @@
   <component name="ChangesViewManager">
     <option name="groupingKeys">
       <option value="directory" />
+    </option>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
     </option>
   </component>
   <component name="Git.Settings">
@@ -53,6 +72,7 @@
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/aspnetcore/fedc545ce86467b7d3413d906f1ab02fb3db12ff/src/Mvc/Mvc.ViewFeatures/src/Controller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/e77011b31a3e5c47d931248a64b47f9b2d47853d/src/libraries/System.Private.CoreLib/src/System/Threading/Thread.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/44e57bb159344fc6915e90738a7eb4c5170a0/24/097ca31f/ClaimTypes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7a9a87fb15ee4c28800e3be0bbe531f9a25108/29/dfb81987/IIdentity.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b7146d0d419a468c86f49b811f572df11cbb08/e2/7db499d2/ControllerBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e02e7fd240824a75830f51c85484bcb91b9318/8c/58248d97/HttpContent.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/27dd169d61db0ade12318dd2a1933efe83a1d90d8644841c064a9b9811ff86e/SecurityToken.cs" root0="SKIP_HIGHLIGHTING" />
@@ -61,7 +81,31 @@
     <setting file="file://$PROJECT_DIR$/DataAccess/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Prn231_Project/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebClient/Controllers/HomeController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebClient/Controllers/PostController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Services/UserService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Services/UserService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Services/UserValidateService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Services/UserValidateService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebClient/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="mock://UserService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://UserValidateService.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -83,6 +127,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -249,7 +294,9 @@
       <workItem from="1721322481632" duration="2314000" />
       <workItem from="1721335223115" duration="4440000" />
       <workItem from="1721411036427" duration="2058000" />
-      <workItem from="1721456078148" duration="591000" />
+      <workItem from="1721456078148" duration="2411000" />
+      <workItem from="1721463609463" duration="5224000" />
+      <workItem from="1721481959322" duration="5735000" />
     </task>
     <task id="LOCAL-00001" summary="add gitignore">
       <option name="closed" value="true" />
@@ -355,7 +402,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721339360321</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="add comment feature">
+      <option name="closed" value="true" />
+      <created>1721457268528</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1721457268528</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -387,25 +442,7 @@
     <MESSAGE value="[WIP] create thread" />
     <MESSAGE value="add view profile" />
     <MESSAGE value="view own posts and view detail posts" />
-    <option name="LAST_COMMIT_MESSAGE" value="view own posts and view detail posts" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/WebClient/Controllers/PostController.cs</url>
-          <line>123</line>
-          <properties documentPath="C:\Users\PC\Documents\GitHub\Prn231_Project\WebClient\Controllers\PostController.cs" initialLine="123" containingFunctionPresentation="Method 'GetCommentsOnPost'">
-            <startOffsets>
-              <option value="4639" />
-            </startOffsets>
-            <endOffsets>
-              <option value="4658" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="add comment feature" />
+    <option name="LAST_COMMIT_MESSAGE" value="add comment feature" />
   </component>
 </project>

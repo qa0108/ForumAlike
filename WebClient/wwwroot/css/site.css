@@ -16,3 +16,24 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.link-spacing {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.plain-text-link {
+  color: inherit; /* Make the link color the same as the surrounding text */
+  text-decoration: none; /* Remove underline */
+  cursor: default; /* Optional: change the cursor to default instead of pointer */
+}
+
+.no-bullets {
+  list-style-type: none;
+}
+
+.title-actions-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

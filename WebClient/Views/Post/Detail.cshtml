@@ -1,3 +1,4 @@
+@using Microsoft.EntityFrameworkCore.Metadata.Internal
 @{
     Layout = "_Layout";
     var post     = ViewBag.Post as DataAccess.Models.Post;
@@ -9,14 +10,35 @@
 <html>
 <head>
     <title>@post?.Title</title>
+    <link rel="stylesheet" href="~/css/PostDetail.css"/>
 </head>
 <body>
 
 <div>
-    <h3>@post.Title</h3>
+    <div class="title-actions-container">
+        <h2>@post?.Title</h2>
+        @if (ViewBag.IsOwner != null && ViewBag.IsOwner)
+        {
+            <div class="div-right-align" style="margin-bottom: 15px; margin-top: 15px">
+                <a class="btn-primary btn" href="/Post/Modify/?postId=@post.PostId">Modify</a>
+                <a class="btn-danger btn" id="deletePostButton">Delete</a>
+            </div>
+        }
+    </div>
     <p>@post.Content</p>
 </div>
 
+<div>
+    <form asp-action="AddComment" method="post">
+        <input type="hidden" name="PostId" value="@post.PostId"/>
+        <div class="form-group">
+            <textarea class="form-control rounded-textarea" id="Content" name="Content" placeholder="Add a comment"></textarea>
+        </div>
+        <div class="div-right-align">
+            <button type="submit" class="btn btn-primary btn-sm">Post Comment</button>
+        </div>
+    </form>
+</div>
 <div>
     <h4>Comments</h4>
     @if (comments != null && comments.Any())
@@ -36,16 +58,16 @@
         <p>No comments yet.</p>
     }
 </div>
-<div>
-    <h4>Leave a Comment</h4>
-    <form asp-action="AddComment" method="post">
-        <input type="hidden" name="PostId" value="@post.PostId"/>
-        <div class="form-group">
-            <label for="Content">Comment:</label>
-            <textarea class="form-control" id="Content" name="Content" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Post Comment</button>
-    </form>
-</div>
 </body>
 </html>
+
+<script>
+document.getElementById('deletePostButton').addEventListener('click', function(e) {
+    e.preventDefault(); // Prevent the default link behavior
+    var postId = '@post.PostId'; // Get the postId from the Razor model
+    var confirmDeletion = confirm('Are you sure you want to delete this post?');
+    if (confirmDeletion) {
+        window.location.href = '/Post/Delete/?postId=' + postId;
+    }
+});
+</script>

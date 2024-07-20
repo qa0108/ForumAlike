@@ -18,7 +18,7 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+            @*<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
@@ -27,18 +27,19 @@
                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                     </li>
                 </ul>
-            </div>
+            </div>*@
         </div>
 
         @if (ViewBag.IsAuthenticated == null || !ViewBag.IsAuthenticated)
         {
-            <p><a href="/User/Login/">Login</a></p>
-            <p><a href="/User/Register/">Register</a></p>
+            <p class="link-spacing btn"><a href="/User/Login/">Login</a></p>
+            <p class="link-spacing btn"><a href="/User/Register/">Register</a></p>
         }
         else
         {
-            <p><a href="/User/ViewProfile/">ViewProfile</a></p>
-            <p><a href="/User/Logout/">Logout</a></p>
+            <p class="link-spacing"><a href="/Post/Create/" class="btn btn-primary btn-sm">Write post</a></p>
+            <p class="link-spacing"><a href="/User/ViewProfile/" class="btn">ViewProfile</a></p>
+            <p class="link-spacing"><a href="/User/Logout/" class="btn" style="color: red;">Logout</a></p>
         }
         
     </nav>

@@ -30,7 +30,7 @@ namespace WebClient.Controllers
         // Update HomeController.cs
         public async Task<IActionResult> Index()
         {
-            this.ViewBag.IsAuthenticated = this.userValidateService.IsUserAuthenticate();
+            this.ViewBag.IsAuthenticated = this.userValidateService.IsUserAuthenticated();
             var posts                             = await this.GetAllPosts();
             if (posts != null) this.ViewBag.Posts = posts;
             return this.View();

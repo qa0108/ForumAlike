@@ -1,0 +1,13 @@
+.rounded-textarea {
+    border-radius: 35px;
+    height: 45px;
+    line-height: 45px; /* Make line-height equal to the height for vertical centering */
+    padding-top: 0;
+    padding-bottom: 0;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+.div-right-align {
+    text-align: right;
+}
