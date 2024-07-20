@@ -2,7 +2,7 @@
 @{
     Layout = "_Layout";
     var post     = ViewBag.Post as DataAccess.Models.Post;
-    var comments = ViewBag.Comments as List<DataAccess.Models.Reply>; // Assuming you have a Comment model and it's passed to the view
+    var replies = ViewBag.Comments as List<DataAccess.Models.Reply>; // Assuming you have a Comment model and it's passed to the view
 }
 
 <!DOCTYPE html>
@@ -40,10 +40,10 @@
     </form>
 </div>
 <div>
-    <h4>Comments</h4>
-    @if (comments != null && comments.Any())
+    <h4>Replies</h4>
+    @if (replies != null && replies.Any())
     {
-        foreach (var comment in comments)
+        foreach (var comment in replies)
         {
             <div class="comment">
                 <p>

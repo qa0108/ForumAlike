@@ -1,23 +1,66 @@
 @using DataAccess.Models
 
 @{
-    Layout            = null;
     ViewData["Title"] = "Profile";
-    var user = ViewBag.User as User;
+    var user    = ViewBag.User as User;
+    var posts   = ViewBag.Posts as List<Post>;
+    var replies = ViewBag.Replies as List<Reply>;
 }
 
 <!DOCTYPE html>
 
 <html>
 <head>
-    <title>title</title>
+    <title>Profile</title>
 </head>
 <body>
 <div>
-    <p>user.UserName</p>
-</div>
-<div>
-    <p><a href="/Post/ViewOwnPosts">My posts</a></p>
+    <h2>@user?.UserName's profile</h2>
+    <nav>
+        <ul style="list-style: none; padding: 0;">
+            <li style="display: inline; margin-right: 10px;">
+                <a href="/User/ViewProfile/?option=0" class="plain-text-link">Overview</a>
+            </li>
+            <li style="display: inline; margin-right: 10px;">
+                <a href="/User/ViewProfile/?option=1" class="plain-text-link">Posts</a>
+            </li>
+            <li style="display: inline; margin-right: 10px;">
+                <a href="/User/ViewProfile/?option=2" class="plain-text-link">Replies</a>
+            </li>
+        </ul>
+    </nav>
+
+    @if (posts != null && posts.Any())
+    {
+        @foreach (var post in posts)
+        {
+            <a href="/Post/Detail/?postId=@post.PostId" class="plain-text-link">
+                <h3 class="font-weight-bold">@post.Title</h3>
+            </a>
+            <p>@post.Content</p>
+        }
+    }
+
+    <div>
+        @if (replies != null && replies.Any())
+        {
+            <h4>Replies</h4>
+            foreach (var reply in replies)
+            {
+                <div class="comment">
+                    <div style="display: flex; gap: 15px;">
+                        <p style="margin: 0;">t/ @reply.Post?.Thread?.Title</p>
+                        <p style="margin: 0;">-</p>
+                        <p style="margin: 0;">@reply.Post?.Title?.Substring(0, Math.Min(20, reply.Post.Title.Length))</p>
+                    </div>
+                    <p>
+                        <strong>u/ @reply.User?.UserName</strong>
+                    </p>
+                    <p>@reply.Content</p>
+                </div>
+            }
+        }
+    </div>
 </div>
 </body>
 </html>

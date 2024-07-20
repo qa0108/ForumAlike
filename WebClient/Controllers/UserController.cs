@@ -14,14 +14,18 @@
     {
         private readonly HttpClient          httpClient;
         private readonly UserValidateService userValidateService;
-
-        private const string BaseApiLink = "http://localhost:5000/api/User";
+        private readonly PostService         postService;
+        private readonly ReplyService        replyService;
 
         public UserController(HttpClient httpClient,
-            UserValidateService userValidateService)
+            UserValidateService userValidateService,
+            PostService postService,
+            ReplyService replyService)
         {
             this.httpClient          = httpClient;
             this.userValidateService = userValidateService;
+            this.postService         = postService;
+            this.replyService        = replyService;
         }
 
         public IActionResult Index() { return this.RedirectToAction(nameof(Login)); }
@@ -75,7 +79,7 @@
         }
 
         [HttpGet]
-        public async Task<IActionResult> ViewProfile()
+        public async Task<IActionResult> ViewProfile(int option)
         {
             var claimPrincipal = this.userValidateService.GetClaimPrincipal();
             var userId         = claimPrincipal?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
@@ -84,7 +88,44 @@
                 return this.RedirectToAction("Index", "Home");
             }
 
-            var user = this.GetUserById(int.Parse(userId));
+            var user = await this.GetUserById(int.Parse(userId));
+            switch (option)
+            {
+                case 0:
+                {
+                    if (user != null)
+                    {
+                        var posts = await this.postService.GetPostsByUserIdAsync(user.UserId);
+                        this.ViewBag.Posts = posts;
+                        var replies = await this.replyService.GetRepliesByUserId(user.UserId);
+                        this.ViewBag.Replies = replies;
+                    }
+
+                    break;
+                }
+
+                case 1:
+                {
+                    if (user != null)
+                    {
+                        var posts = await this.postService.GetPostsByUserIdAsync(user.UserId);
+                        this.ViewBag.Posts = posts;
+                        this.ViewBag.Replies = null;
+                    }
+
+                    break;
+                }
+                
+                case 2:
+                    if (user != null)
+                    {
+                        this.ViewBag.Posts = null;
+                        var replies = await this.replyService.GetRepliesByUserId(user.UserId);
+                        this.ViewBag.Replies = replies;
+                    }
+
+                    break;
+            }
             this.ViewBag.IsAuthenticated = this.userValidateService.IsUserAuthenticated();
             this.ViewBag.User            = user;
 

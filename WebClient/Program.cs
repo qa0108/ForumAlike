@@ -16,6 +16,7 @@ namespace WebClient
             builder.Services.AddHttpContextAccessor();
             builder.Services.AddScoped<UserValidateService>();
             builder.Services.AddScoped<PostService>();
+            builder.Services.AddScoped<ReplyService>();
 
             var app = builder.Build();
 

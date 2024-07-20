@@ -9,10 +9,7 @@ namespace DataAccess.DAOs
     {
         private readonly ForumDBContext context;
 
-        public ReplyDAO(ForumDBContext context)
-        {
-            this.context = context;
-        }
+        public ReplyDAO(ForumDBContext context) { this.context = context; }
 
         public void Create(Reply reply)
         {
@@ -49,6 +46,7 @@ namespace DataAccess.DAOs
             return this.context.Replies
                 .Include(r => r.User)
                 .Include(r => r.Post)
+                .ThenInclude(p => p.Thread)
                 .ToList();
         }
     }

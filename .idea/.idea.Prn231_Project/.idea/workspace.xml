@@ -11,34 +11,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4764b45-f9b0-4abf-96c6-fcb109f4f8fe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/WebClient/Services/PostService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebClient/Views/Post/Modify.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebClient/wwwroot/css/PostDetail.css" afterDir="false" />
+    <list default="true" id="c4764b45-f9b0-4abf-96c6-fcb109f4f8fe" name="Changes" comment="post">
+      <change afterPath="$PROJECT_DIR$/WebClient/Services/ReplyService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Prn231_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Prn231_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/Controllers/PostController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Controllers/PostController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessObject/DAOs/ReplyDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/DAOs/ReplyDAO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebClient/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Controllers/UserController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebClient/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/Services/UserValidateService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Services/UserValidateService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Views/Home/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebClient/Views/Post/Detail.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Views/Post/Detail.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Views/Shared/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/WebClient.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/WebClient.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/Views/User/ViewProfile.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Views/User/ViewProfile.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.staticwebassets.runtime.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.staticwebassets.runtime.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/ref/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/ref/WebClient.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/refint/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/refint/WebClient.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/staticwebassets.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/staticwebassets.build.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/staticwebassets.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/staticwebassets.development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/staticwebassets.pack.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/staticwebassets.pack.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/staticwebassets/msbuild.WebClient.Microsoft.AspNetCore.StaticWebAssets.props" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/staticwebassets/msbuild.WebClient.Microsoft.AspNetCore.StaticWebAssets.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/wwwroot/css/site.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -296,7 +285,7 @@
       <workItem from="1721411036427" duration="2058000" />
       <workItem from="1721456078148" duration="2411000" />
       <workItem from="1721463609463" duration="5224000" />
-      <workItem from="1721481959322" duration="5735000" />
+      <workItem from="1721481959322" duration="10039000" />
     </task>
     <task id="LOCAL-00001" summary="add gitignore">
       <option name="closed" value="true" />
@@ -410,7 +399,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721457268528</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="post">
+      <option name="closed" value="true" />
+      <created>1721491637341</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1721491637341</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -443,6 +440,7 @@
     <MESSAGE value="add view profile" />
     <MESSAGE value="view own posts and view detail posts" />
     <MESSAGE value="add comment feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="add comment feature" />
+    <MESSAGE value="post" />
+    <option name="LAST_COMMIT_MESSAGE" value="post" />
   </component>
 </project>
