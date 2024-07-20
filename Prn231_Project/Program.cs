@@ -1,6 +1,7 @@
 namespace Prn231_Project
 {
     using System.Text;
+    using System.Text.Json.Serialization;
     using DataAccess.DAOs;
     using DataAccess.Models;
     using DataAccess.Repositories.Implementation;
@@ -83,9 +84,10 @@ namespace Prn231_Project
 
                 // Ignore null values in JSON output
                 options.JsonSerializerOptions.IgnoreNullValues = true;
+                options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
 
                 // Configure date format, etc.
-                options.JsonSerializerOptions.Converters.Add(new System.Text.Json.Serialization.JsonStringEnumConverter());
+                options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
                 // Add any other necessary configuration as per your requirements
             });
             

@@ -3,6 +3,7 @@ namespace DataAccess.DAOs
     using DataAccess.Models;
     using System.Collections.Generic;
     using System.Linq;
+    using Microsoft.EntityFrameworkCore;
 
     public class ReplyDAO
     {
@@ -21,7 +22,10 @@ namespace DataAccess.DAOs
 
         public Reply? GetById(int id)
         {
-            return context.Replies.Find(id);
+            return context.Replies
+                .Include(r => r.User)
+                .Include(r => r.Post)
+                .FirstOrDefault(r => r.ReplyId == id);
         }
 
         public void Update(Reply reply)
@@ -42,7 +46,10 @@ namespace DataAccess.DAOs
 
         public List<Reply> GetAll()
         {
-            return context.Replies.ToList();
+            return this.context.Replies
+                .Include(r => r.User)
+                .Include(r => r.Post)
+                .ToList();
         }
     }
 }

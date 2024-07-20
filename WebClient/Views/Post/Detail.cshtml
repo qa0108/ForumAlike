@@ -1,23 +1,51 @@
 @{
     Layout = "_Layout";
-    var post = ViewBag.Post as DataAccess.Models.Post;
+    var post     = ViewBag.Post as DataAccess.Models.Post;
+    var comments = ViewBag.Comments as List<DataAccess.Models.Reply>; // Assuming you have a Comment model and it's passed to the view
 }
 
 <!DOCTYPE html>
 
 <html>
 <head>
-    <title>title</title>
+    <title>@post?.Title</title>
 </head>
 <body>
-@if (post != null)
-{
-    <div>
-        <h3>@post.Title</h3>
-    </div>   
-    <div>
-        <p>@post.Content</p>
-    </div>
-}
+
+<div>
+    <h3>@post.Title</h3>
+    <p>@post.Content</p>
+</div>
+
+<div>
+    <h4>Comments</h4>
+    @if (comments != null && comments.Any())
+    {
+        foreach (var comment in comments)
+        {
+            <div class="comment">
+                <p>
+                    <strong>@comment.User?.UserName</strong>
+                </p>
+                <p>@comment.Content</p>
+            </div>
+        }
+    }
+    else
+    {
+        <p>No comments yet.</p>
+    }
+</div>
+<div>
+    <h4>Leave a Comment</h4>
+    <form asp-action="AddComment" method="post">
+        <input type="hidden" name="PostId" value="@post.PostId"/>
+        <div class="form-group">
+            <label for="Content">Comment:</label>
+            <textarea class="form-control" id="Content" name="Content" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Post Comment</button>
+    </form>
+</div>
 </body>
 </html>

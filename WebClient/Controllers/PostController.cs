@@ -1,7 +1,5 @@
 // WebClient/Controllers/PostController.cs
 
-using Thread = DataAccess.Models.Thread;
-
 namespace WebClient.Controllers
 {
     using System.Security.Claims;
@@ -101,6 +99,7 @@ namespace WebClient.Controllers
         {
             this.ViewBag.IsAuthenticated = this.userValidateService.IsUserAuthenticate();
             var response = await this.httpClient.GetAsync($"http://localhost:5000/api/Post/{postId}");
+            this.ViewBag.Comments = await this.GetCommentsOnPost(postId);
 
             if (response.IsSuccessStatusCode)
             {
@@ -111,6 +110,21 @@ namespace WebClient.Controllers
             }
 
             return this.View("Error");
+        }
+
+        public async Task<List<Reply>?> GetCommentsOnPost(int postId)
+        {
+            var response = await this.httpClient.GetAsync($"http://localhost:5000/api/Reply/");
+
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonResponse = await response.Content.ReadAsStringAsync();
+                var replies      = JsonConvert.DeserializeObject<List<Reply>>(jsonResponse);
+                var postReplies  = replies?.Where(r => r.PostId == postId).ToList();
+                return postReplies;
+            }
+
+            return null;
         }
         
         public async Task<List<Post>?> GetPostByUserId(int userId)
@@ -125,6 +139,33 @@ namespace WebClient.Controllers
             }
 
             return null;
+        }
+        
+        [HttpPost]
+        public async Task<IActionResult> AddComment(Reply reply)
+        {
+            var claimsPrincipal = this.userValidateService.GetClaimPrincipal();
+            if (claimsPrincipal == null)
+            {
+                this.ViewBag.AddCommentErrorMessage = "Please log in to comment";
+                return this.RedirectToAction("Detail", "Post", new {postId = reply.PostId});
+            }
+            
+            reply.CreatedAt = DateTime.Now;
+            var userId          = claimsPrincipal?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            reply.UserId = int.Parse(userId);
+            
+            var jsonContent = JsonConvert.SerializeObject(reply);
+            var content     = new StringContent(jsonContent, Encoding.UTF8, "application/json");
+
+            var response = await this.httpClient.PostAsync("http://localhost:5000/api/Reply", content);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                this.ViewBag.AddCommentErrorMessage = "There is something wrong while adding comment";
+            }
+            
+            return this.RedirectToAction("Detail", "Post", new {postId = reply.PostId});
         }
     }
 }
