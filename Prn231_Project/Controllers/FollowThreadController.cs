@@ -4,6 +4,8 @@ using DataAccess.Models;
 using DataAccess.Repositories.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
+[Route("api/[controller]")]
+[ApiController]
 public class FollowThreadController : ControllerBase
 {
     private readonly IFollowThreadRepository followThreadRepository;
@@ -33,35 +35,19 @@ public class FollowThreadController : ControllerBase
 
         return Ok(followThread);
     }
-    
+
+    [HttpDelete("{userId}/{threadId}")]
+    public IActionResult Delete(int userId, int threadId)
+    {
+        this.followThreadRepository.Delete(userId,threadId);
+        return NoContent();
+    }
+
+
     [HttpPost]
     public IActionResult Add([FromBody] FollowThread followThread)
     {
-        var addedThread = this.followThreadRepository.Add(followThread);
-        if (addedThread == null)
-        {
-            return BadRequest("Unable to add follow thread.");
-        }
-
-        return CreatedAtAction(nameof(GetAll), new { id = addedThread.FollowId }, addedThread);
-    }
-
-    [HttpDelete("{id}")]
-    public IActionResult Delete(int id)
-    {
-        this.followThreadRepository.Delete(id);
-        return NoContent();
-    }
-
-    [HttpPut("{id}")]
-    public IActionResult Update(int id, [FromBody] FollowThread followThread)
-    {
-        if (id != followThread.FollowId)
-        {
-            return BadRequest("Mismatched follow thread ID.");
-        }
-
-        this.followThreadRepository.Update(followThread);
-        return NoContent();
+        this.followThreadRepository.Add(followThread.UserId, followThread.ThreadId);
+        return this.Ok();
     }
 }

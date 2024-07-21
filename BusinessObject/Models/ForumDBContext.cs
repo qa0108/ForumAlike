@@ -50,32 +50,30 @@ namespace DataAccess.Models
 
             modelBuilder.Entity<FollowThread>(entity =>
             {
-                entity.HasKey(e => e.FollowId)
-                    .HasName("PK__FollowTh__2CE8108EA8DFE186");
+                entity.HasKey(e => new { e.UserId, e.ThreadId })
+                    .HasName("PK__FollowTh__4100F9C2EA6CAB7A");
 
                 entity.ToTable("FollowThread");
 
-                entity.Property(e => e.FollowId).HasColumnName("FollowID");
+                entity.Property(e => e.UserId).HasColumnName("UserID");
+
+                entity.Property(e => e.ThreadId).HasColumnName("ThreadID");
 
                 entity.Property(e => e.FollowedAt)
                     .HasColumnType("datetime")
                     .HasDefaultValueSql("(getdate())");
 
-                entity.Property(e => e.ThreadId).HasColumnName("ThreadID");
-
-                entity.Property(e => e.UserId).HasColumnName("UserID");
-
                 entity.HasOne(d => d.Thread)
                     .WithMany(p => p.FollowThreads)
                     .HasForeignKey(d => d.ThreadId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__FollowThr__Threa__5DCAEF64");
+                    .HasConstraintName("FK__FollowThr__Threa__6C190EBB");
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.FollowThreads)
                     .HasForeignKey(d => d.UserId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__FollowThr__UserI__5CD6CB2B");
+                    .HasConstraintName("FK__FollowThr__UserI__6B24EA82");
             });
 
             modelBuilder.Entity<Post>(entity =>

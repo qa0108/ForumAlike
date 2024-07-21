@@ -3,6 +3,7 @@ namespace DataAccess.DAOs
     using DataAccess.Models;
     using System.Collections.Generic;
     using System.Linq;
+    using Microsoft.EntityFrameworkCore;
 
     public class ThreadDAO
     {
@@ -42,7 +43,9 @@ namespace DataAccess.DAOs
 
         public List<Thread> GetAll()
         {
-            return context.Threads.ToList();
+            return this.context.Threads
+                .Include(t => t.User)
+                .ToList();
         }
     }
 }

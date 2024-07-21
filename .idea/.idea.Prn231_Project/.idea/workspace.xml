@@ -11,14 +11,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4764b45-f9b0-4abf-96c6-fcb109f4f8fe" name="Changes" comment="update models">
-      <change afterPath="$PROJECT_DIR$/BusinessObject/DAOs/FollowThreadDAO.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BusinessObject/Repositories/Implementation/FollowThreadRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BusinessObject/Repositories/Interfaces/IFollowThreadRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Prn231_Project/Controllers/FollowThreadController.cs" afterDir="false" />
+    <list default="true" id="c4764b45-f9b0-4abf-96c6-fcb109f4f8fe" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/WebClient/Controllers/AdminController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebClient/Services/TheadService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebClient/Views/Thread/Detail.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Prn231_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Prn231_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessObject/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessObject/DAOs/FollowThreadDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/DAOs/FollowThreadDAO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessObject/DAOs/PostDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/DAOs/PostDAO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessObject/DAOs/ThreadDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/DAOs/ThreadDAO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessObject/Models/FollowThread.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/Models/FollowThread.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessObject/Models/ForumDBContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/Models/ForumDBContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessObject/Repositories/Implementation/FollowThreadRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/Repositories/Implementation/FollowThreadRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessObject/Repositories/Interfaces/IFollowThreadRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/Repositories/Interfaces/IFollowThreadRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prn231_Project/Controllers/FollowThreadController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/Controllers/FollowThreadController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Prn231_Project/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/ref/Prn231_Project.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/ref/Prn231_Project.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/refint/Prn231_Project.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/refint/Prn231_Project.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Controllers/HomeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/Controllers/ThreadController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Controllers/ThreadController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/Services/PostService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Services/PostService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/Services/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Services/UserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/Views/Home/Admin.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Views/Admin/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Views/Home/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/ref/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/ref/WebClient.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/refint/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/refint/WebClient.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,33 +87,47 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6283e3818f3f9b5bc566b82f819dbef6afa6f25fd9dbfb76e39324311139465/ODataOptions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e971f1a639e97b6c53ff6b5e399007cb64af3837af3edbcdf276d1109dafe6/ODataConventionModelBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DataAccess/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/Prn231_Project/Controllers/FollowThreadController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/Prn231_Project/Controllers/FollowThreadController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/Prn231_Project/Controllers/FollowThreadController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/Prn231_Project/Controllers/FollowThreadController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/Prn231_Project/Controllers/FollowThreadController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/Prn231_Project/Controllers/FollowThreadController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/Prn231_Project/Controllers/FollowThreadController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/Prn231_Project/Controllers/FollowThreadController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/Prn231_Project/Controllers/FollowThreadController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/Prn231_Project/Controllers/FollowThreadController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/Prn231_Project/Controllers/FollowThreadController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/Prn231_Project/Controllers/FollowThreadController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/Prn231_Project/Controllers/FollowThreadController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/Prn231_Project/Controllers/FollowThreadController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/Prn231_Project/Controllers/FollowThreadController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/Prn231_Project/Controllers/FollowThreadController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/Prn231_Project/Controllers/FollowThreadController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Prn231_Project/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebClient/Controllers/HomeController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebClient/Controllers/PostController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/PostController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Services/UserService.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Services/UserService.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Services/UserValidateService.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Services/UserValidateService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/ThreadController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/ThreadController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/ThreadController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/ThreadController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/ThreadController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/ThreadController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/ThreadController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/ThreadController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/ThreadController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/ThreadController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/ThreadController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/ThreadController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/ThreadController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/ThreadController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Controllers/ThreadController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Services/TheadService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Services/TheadService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Services/TheadService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Services/TheadService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/PC/Documents/GitHub/Prn231_Project/WebClient/Services/TheadService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebClient/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
-    <setting file="mock://UserService.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://UserValidateService.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -277,7 +319,8 @@
       <workItem from="1721456078148" duration="2411000" />
       <workItem from="1721463609463" duration="5224000" />
       <workItem from="1721481959322" duration="14402000" />
-      <workItem from="1721537796998" duration="6017000" />
+      <workItem from="1721537796998" duration="10768000" />
+      <workItem from="1721556058585" duration="7709000" />
     </task>
     <task id="LOCAL-00001" summary="add gitignore">
       <option name="closed" value="true" />
@@ -431,7 +474,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721546886869</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="add follow thread">
+      <option name="closed" value="true" />
+      <created>1721547906141</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1721547906141</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -469,7 +520,8 @@
     <MESSAGE value="." />
     <MESSAGE value="admin site" />
     <MESSAGE value="update models" />
-    <option name="LAST_COMMIT_MESSAGE" value="update models" />
+    <MESSAGE value="add follow thread" />
+    <option name="LAST_COMMIT_MESSAGE" value="add follow thread" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

@@ -18,6 +18,7 @@ namespace WebClient
             builder.Services.AddScoped<PostService>();
             builder.Services.AddScoped<ReplyService>();
             builder.Services.AddScoped<UserService>();
+            builder.Services.AddScoped<ThreadService>();
 
             var app = builder.Build();
 

@@ -50,6 +50,7 @@ namespace Prn231_Project
             builder.Services.AddScoped<RoleDAO>();
             builder.Services.AddScoped<ThreadDAO>();
             builder.Services.AddScoped<UserDAO>();
+            builder.Services.AddScoped<FollowThreadDAO>();
 
             // Register repository interfaces and their implementations with the dependency injection container
             builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();

@@ -5,7 +5,6 @@ namespace DataAccess.Models
 {
     public partial class FollowThread
     {
-        public int FollowId { get; set; }
         public int UserId { get; set; }
         public int ThreadId { get; set; }
         public DateTime? FollowedAt { get; set; }

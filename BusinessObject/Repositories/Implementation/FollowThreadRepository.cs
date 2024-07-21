@@ -13,16 +13,15 @@ public class FollowThreadRepository : IFollowThreadRepository
     {
         this.followThreadDao = followThreadDao;
     }
-
-    public FollowThread Add(FollowThread followThread)
+    
+    public void Add(int userId, int threadId)
     {
-        this.followThreadDao.AddFollowThread(followThread);
-        return followThread;
+        this.followThreadDao.AddFollowThread(userId, threadId);
     }
 
-    public void Delete(int followId)
+    public void Delete(int userId, int threadId)
     {
-        this.followThreadDao.DeleteFollowThread(followId);
+        this.followThreadDao.DeleteFollowThread(userId, threadId);
     }
 
     public List<FollowThread> GetAll()

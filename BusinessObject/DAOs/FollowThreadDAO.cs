@@ -25,10 +25,30 @@ public class FollowThreadDAO
             .ToList();
     }
 
-    public void AddFollowThread(FollowThread followThread)
+    public void AddFollowThread(int userId, int threadId)
     {
-        this.context.FollowThreads.Add(followThread);
-        this.context.SaveChanges();
+        var user   = context.Users.Find(userId);
+        var thread = context.Threads.Find(threadId);
+
+        if (user != null && thread != null)
+        {
+            var followThread = new FollowThread
+            {
+                UserId     = user.UserId,
+                ThreadId   = thread.ThreadId,
+                FollowedAt = DateTime.Now,
+                User       = user,
+                Thread     = thread
+            };
+
+            context.FollowThreads.Add(followThread);
+            context.SaveChanges();
+        }
+        else
+        {
+            // Handle the case where the user or thread does not exist
+            Console.WriteLine("User or Thread not found.");
+        }
     }
 
     public void UpdateFollowThread(FollowThread followThread)
@@ -37,9 +57,9 @@ public class FollowThreadDAO
         this.context.SaveChanges();
     }
 
-    public void DeleteFollowThread(int followId)
+    public void DeleteFollowThread(int userId, int threadId)
     {
-        var followThread = this.context.FollowThreads.Find(followId);
+        var followThread = this.context.FollowThreads.FirstOrDefault(ft => ft.UserId == userId && ft.ThreadId == threadId);
         if (followThread != null)
         {
             this.context.FollowThreads.Remove(followThread);

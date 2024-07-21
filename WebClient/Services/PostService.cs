@@ -96,4 +96,10 @@ public class PostService
 
         return null;
     }
+
+    public async Task<List<Post>?> GetPostByThreadId(int threadId)
+    {
+        var posts      = await this.GetAllPosts();
+        return posts?.Where(p => p.ThreadId == threadId).ToList();
+    }
 }
