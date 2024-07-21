@@ -17,6 +17,7 @@ namespace DataAccess.Models
         }
 
         public virtual DbSet<Category> Categories { get; set; } = null!;
+        public virtual DbSet<FollowThread> FollowThreads { get; set; } = null!;
         public virtual DbSet<Post> Posts { get; set; } = null!;
         public virtual DbSet<Reply> Replies { get; set; } = null!;
         public virtual DbSet<Role> Roles { get; set; } = null!;
@@ -28,7 +29,7 @@ namespace DataAccess.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=(local);Database=ForumDB;User Id=sa;Password=123;");
+                optionsBuilder.UseSqlServer("Server=(local);Database=ForumDB;Trusted_Connection=True;");
             }
         }
 
@@ -45,6 +46,36 @@ namespace DataAccess.Models
                     .HasDefaultValueSql("(getdate())");
 
                 entity.Property(e => e.Description).HasMaxLength(255);
+            });
+
+            modelBuilder.Entity<FollowThread>(entity =>
+            {
+                entity.HasKey(e => e.FollowId)
+                    .HasName("PK__FollowTh__2CE8108EA8DFE186");
+
+                entity.ToTable("FollowThread");
+
+                entity.Property(e => e.FollowId).HasColumnName("FollowID");
+
+                entity.Property(e => e.FollowedAt)
+                    .HasColumnType("datetime")
+                    .HasDefaultValueSql("(getdate())");
+
+                entity.Property(e => e.ThreadId).HasColumnName("ThreadID");
+
+                entity.Property(e => e.UserId).HasColumnName("UserID");
+
+                entity.HasOne(d => d.Thread)
+                    .WithMany(p => p.FollowThreads)
+                    .HasForeignKey(d => d.ThreadId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__FollowThr__Threa__5DCAEF64");
+
+                entity.HasOne(d => d.User)
+                    .WithMany(p => p.FollowThreads)
+                    .HasForeignKey(d => d.UserId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__FollowThr__UserI__5CD6CB2B");
             });
 
             modelBuilder.Entity<Post>(entity =>

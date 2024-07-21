@@ -1,9 +1,13 @@
-﻿namespace DataAccess.Models
+﻿using System;
+using System.Collections.Generic;
+
+namespace DataAccess.Models
 {
     public partial class Thread
     {
         public Thread()
         {
+            FollowThreads = new HashSet<FollowThread>();
             Posts = new HashSet<Post>();
         }
 
@@ -15,6 +19,7 @@
 
         public virtual Category? Category { get; set; }
         public virtual User? User { get; set; }
+        public virtual ICollection<FollowThread> FollowThreads { get; set; }
         public virtual ICollection<Post> Posts { get; set; }
     }
 }
