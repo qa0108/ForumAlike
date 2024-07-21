@@ -1,12 +1,10 @@
 ﻿namespace WebClient.Controllers
 {
-    using System.IdentityModel.Tokens.Jwt;
     using System.Net;
     using System.Security.Claims;
     using System.Text;
     using DataAccess.Models;
     using Microsoft.AspNetCore.Mvc;
-    using Microsoft.IdentityModel.Tokens;
     using Newtonsoft.Json;
     using WebClient.Services;
 
@@ -16,16 +14,19 @@
         private readonly UserValidateService userValidateService;
         private readonly PostService         postService;
         private readonly ReplyService        replyService;
+        private readonly UserService         userService;
 
         public UserController(HttpClient httpClient,
             UserValidateService userValidateService,
             PostService postService,
-            ReplyService replyService)
+            ReplyService replyService,
+            UserService userService)
         {
             this.httpClient          = httpClient;
             this.userValidateService = userValidateService;
             this.postService         = postService;
             this.replyService        = replyService;
+            this.userService         = userService;
         }
 
         public IActionResult Index() { return this.RedirectToAction(nameof(Login)); }
@@ -98,6 +99,17 @@
                         var posts = await this.postService.GetPostsByUserIdAsync(user.UserId);
                         this.ViewBag.Posts = posts;
                         var replies = await this.replyService.GetRepliesByUserId(user.UserId);
+                        if (replies != null)
+                        {
+                            var tasks = new List<Task>();
+                            foreach (var reply in replies)
+                            {
+                                tasks.Add(this.AddPostToReply(reply));
+                            }
+
+                            await Task.WhenAll(tasks);
+                        }
+
                         this.ViewBag.Replies = replies;
                     }
 
@@ -133,6 +145,17 @@
             return this.View();
         }
 
+        public async Task AddPostToReply(Reply reply)
+        {
+            var postId = reply.PostId;
+            if (postId != null)
+            {
+                var postIdInt = (int)postId;
+                var post      = await this.postService.GetPostByIdAsync(postIdInt);
+                reply.Post = post;
+            }
+        }
+        
         [HttpGet]
         public IActionResult Logout()
         {
@@ -171,7 +194,23 @@
         [HttpGet]
         public async Task<IActionResult> ChangeProfile()
         {
+            var claimsPrincipal = this.userValidateService.GetClaimPrincipal();
+            if (claimsPrincipal == null) return this.RedirectToAction("Index", "Home");
+            var userId = claimsPrincipal.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var user   = await this.userService.GetUserById(int.Parse(userId));
+            this.ViewBag.User = user;
+            
             return this.View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ChangeProfile(User user)
+        {
+            var claimsPrincipal = this.userValidateService.GetClaimPrincipal();
+            var userId          = claimsPrincipal.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            await this.userService.UpdateUsername(int.Parse(userId), user.UserName);
+
+            return this.RedirectToAction("ViewProfile");
         }
     }
 }

@@ -52,6 +52,17 @@ public class UserService
         return null;
     }
 
+    public async Task UpdateUsername(int userId, string username)
+    {
+        var user = await this.GetUserById(userId);
+        if(user == null) return;
+
+        user.UserName = username;
+        var jsonContent = JsonConvert.SerializeObject(user);
+        var content     = new StringContent(jsonContent, Encoding.UTF8, "application/json");
+        await this.httpClient.PutAsync($"http://localhost:5000/api/User/{userId}", content);
+    }
+    
     public async Task Promote(int userId)
     {
         var user = await this.GetUserById(userId);

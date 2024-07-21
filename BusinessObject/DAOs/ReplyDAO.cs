@@ -21,7 +21,6 @@ namespace DataAccess.DAOs
         {
             return context.Replies
                 .Include(r => r.User)
-                .Include(r => r.Post)
                 .FirstOrDefault(r => r.ReplyId == id);
         }
 
@@ -45,8 +44,6 @@ namespace DataAccess.DAOs
         {
             return this.context.Replies
                 .Include(r => r.User)
-                .Include(r => r.Post)
-                .ThenInclude(p => p.Thread)
                 .ToList();
         }
     }

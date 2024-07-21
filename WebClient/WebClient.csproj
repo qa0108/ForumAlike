@@ -18,4 +18,8 @@
     <None Include="wwwroot\css\PostDetail.css" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Partial\" />
+  </ItemGroup>
+
 </Project>

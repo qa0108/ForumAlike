@@ -1,0 +1,53 @@
+@model DataAccess.Models.Reply
+
+<div class="comment">
+    <p>
+        <strong>@Model.User?.UserName</strong>
+    </p>
+    <p style="margin-top: -15px">@Model.Content</p>
+
+    <button class="reply-btn" data-comment-id="@Model.ReplyId">Reply</button>
+    <button class="show-children-btn" data-comment-id="@Model.ReplyId">Show Replies</button>
+    <form asp-action="AddComment" asp-controller="Post" method="post">
+        <input type="hidden" name="PostId" value="@Model.PostId"/>
+        <input type="hidden" name="ParentReplyId" value="@Model.ReplyId">
+        <div class="reply-input" id="reply-input-@Model.ReplyId" style="display:none;">
+            <div class="form-group">
+                <textarea class="form-control rounded-textarea" id="Content" name="Content" placeholder="Add a comment"></textarea>
+            </div>
+            <div class="text-right-align">
+                <button type="submit" class="btn btn-primary btn-sm">Post Comment</button>
+            </div>
+        </div>
+    </form>
+    <div class="child-comments" id="child-comments-@Model.ReplyId" style="display:none; margin-left: 20px">
+        @foreach (var childComment in @Model.InverseParentReply)
+        {
+            @Html.Partial("_CommentPartial", childComment)
+        }
+    </div>
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Delegating event for 'Reply' button clicks
+    document.addEventListener('click', function(e) {
+        if (e.target && e.target.classList.contains('reply-btn')) {
+            console.log("Click on reply");
+            var commentId = e.target.getAttribute('data-comment-id');
+            var replyInput = document.getElementById('reply-input-' + commentId);
+            replyInput.style.display = replyInput.style.display === 'none' ? 'block' : 'none';
+        }
+    });
+
+    // Delegating event for 'Show Replies' button clicks
+    document.addEventListener('click', function(e) {
+        if (e.target && e.target.classList.contains('show-children-btn')) {
+            var commentId = e.target.getAttribute('data-comment-id');
+            var childComments = document.getElementById('child-comments-' + commentId);
+            childComments.style.display = childComments.style.display === 'none' ? 'block' : 'none';
+        }
+    });
+});
+</script>

@@ -1,5 +1,17 @@
+@model DataAccess.Models.User
 @{
     ViewBag.Title = "title";
+    Layout        = "_Layout";
+    var user = ViewBag.User as DataAccess.Models.User;
 }
+<h2>@user.UserName 's profile</h2>
 
-<h2>title</h2>
+<form asp-action="ChangeProfile" asp-controller="User" method="post">
+    <input type="hidden" name="PostId" value="@user.UserId"/>
+    <div class="form-group">
+        <label for="Username">New Username</label>
+        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", id = "Username" })
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update Username</button>
+</form>

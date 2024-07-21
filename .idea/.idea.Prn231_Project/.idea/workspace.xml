@@ -11,9 +11,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4764b45-f9b0-4abf-96c6-fcb109f4f8fe" name="Changes" comment=",">
+    <list default="true" id="c4764b45-f9b0-4abf-96c6-fcb109f4f8fe" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/WebClient/Views/Post/_CommentPartial.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Prn231_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Prn231_Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessObject/DAOs/PostDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/DAOs/PostDAO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BusinessObject/DAOs/ReplyDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/DAOs/ReplyDAO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Controllers/UserController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/Services/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Services/UserService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebClient/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Views/Home/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/Views/Post/Detail.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Views/Post/Detail.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/Views/User/ChangeProfile.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Views/User/ChangeProfile.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/WebClient.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/WebClient.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/ref/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/ref/WebClient.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/refint/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/refint/WebClient.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/wwwroot/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/wwwroot/css/home.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -289,6 +307,8 @@
       <workItem from="1721537796998" duration="10768000" />
       <workItem from="1721556058585" duration="10186000" />
       <workItem from="1721573485057" duration="2366000" />
+      <workItem from="1721584819317" duration="902000" />
+      <workItem from="1721585735723" duration="3768000" />
     </task>
     <task id="LOCAL-00001" summary="add gitignore">
       <option name="closed" value="true" />

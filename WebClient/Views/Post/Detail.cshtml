@@ -21,10 +21,10 @@
              || (ViewBag.IsAdmin != null && ViewBag.IsAdmin))
         {
             <div class="text-right-align" style="margin-bottom: 15px; margin-top: 15px">
-                 @if (ViewBag.IsOwner != null && ViewBag.IsOwner)
-                 {
-                     <a class="btn-primary btn" href="/Post/Modify/?postId=@post.PostId">Modify</a>   
-                 }
+                @if (ViewBag.IsOwner != null && ViewBag.IsOwner)
+                {
+                    <a class="btn-primary btn" href="/Post/Modify/?postId=@post.PostId">Modify</a>
+                }
                 <a class="btn-danger btn" id="deletePostButton">Delete</a>
             </div>
         }
@@ -45,16 +45,12 @@
 </div>
 <div>
     <h4>Replies</h4>
+    
     @if (replies != null && replies.Any())
     {
-        foreach (var comment in replies)
+        foreach (var comment in replies.Where(c => c.ParentReplyId == null))
         {
-            <div class="comment">
-                <p>
-                    <strong>@comment.User?.UserName</strong>
-                </p>
-                <p>@comment.Content</p>
-            </div>
+            @Html.Partial("_CommentPartial", comment)
         }
     }
     else
@@ -66,6 +62,35 @@
 </html>
 
 <script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.reply-btn').forEach(function(button) {
+        button.addEventListener('click', function() {
+            console.log("Click on reply");
+            var commentId = this.getAttribute('data-comment-id');
+            var replyInput = document.getElementById('reply-input-' + commentId);
+            replyInput.style.display = replyInput.style.display === 'none' ? 'block' : 'none';
+        });
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.reply-btn').forEach(function(button) {
+        button.addEventListener('click', function() {
+            var commentId = this.getAttribute('data-comment-id');
+            var replyInput = document.getElementById('reply-input-' + commentId);
+            replyInput.style.display = replyInput.style.display === 'none' ? 'block' : 'none';
+        });
+    });
+
+    document.querySelectorAll('.show-children-btn').forEach(function(button) {
+        button.addEventListener('click', function() {
+            var commentId = this.getAttribute('data-comment-id');
+            var childComments = document.getElementById('child-comments-' + commentId);
+            childComments.style.display = childComments.style.display === 'none' ? 'block' : 'none';
+        });
+    });
+});
+
 document.getElementById('deletePostButton').addEventListener('click', function(e) {
     e.preventDefault();
     var postId = '@post.PostId'; 
