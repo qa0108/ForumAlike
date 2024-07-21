@@ -30,8 +30,19 @@ namespace DataAccess.DAOs
 
         public void Update(Post post)
         {
-            context.Posts.Update(post);
-            context.SaveChanges();
+            var existingPost = context.Posts.FirstOrDefault(p => p.PostId == post.PostId);
+            if (existingPost != null)
+            {
+                context.Entry(existingPost).CurrentValues.SetValues(post);
+                try
+                {
+                    context.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    // Handle all other exceptions
+                }
+            }
         }
 
         public void Delete(int id)

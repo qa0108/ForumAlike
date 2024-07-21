@@ -11,27 +11,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4764b45-f9b0-4abf-96c6-fcb109f4f8fe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/WebClient/Views/Post/_CommentPartial.cshtml" afterDir="false" />
+    <list default="true" id="c4764b45-f9b0-4abf-96c6-fcb109f4f8fe" name="Changes" comment="update database">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Prn231_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Prn231_Project/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BusinessObject/DAOs/PostDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/DAOs/PostDAO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessObject/DAOs/ReplyDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/DAOs/ReplyDAO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/obj/Debug/net6.0/Prn231_Project.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/Controllers/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Controllers/UserController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/Services/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Services/UserService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Views/Home/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/Views/Post/Detail.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Views/Post/Detail.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/Views/User/ChangeProfile.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Views/User/ChangeProfile.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/WebClient.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/WebClient.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.csproj.AssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/ref/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/ref/WebClient.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/refint/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/refint/WebClient.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/wwwroot/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/wwwroot/css/home.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -308,7 +290,7 @@
       <workItem from="1721556058585" duration="10186000" />
       <workItem from="1721573485057" duration="2366000" />
       <workItem from="1721584819317" duration="902000" />
-      <workItem from="1721585735723" duration="3768000" />
+      <workItem from="1721585735723" duration="5007000" />
     </task>
     <task id="LOCAL-00001" summary="add gitignore">
       <option name="closed" value="true" />
@@ -494,7 +476,23 @@
       <option name="project" value="LOCAL" />
       <updated>1721580653920</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary=".">
+      <option name="closed" value="true" />
+      <created>1721590182479</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1721590182479</updated>
+    </task>
+    <task id="LOCAL-00025" summary="update database">
+      <option name="closed" value="true" />
+      <created>1721590385165</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1721590385165</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -529,16 +527,47 @@
     <MESSAGE value="add comment feature" />
     <MESSAGE value="post" />
     <MESSAGE value="Profile view" />
-    <MESSAGE value="." />
     <MESSAGE value="admin site" />
     <MESSAGE value="update models" />
     <MESSAGE value="add follow thread" />
     <MESSAGE value="promote demote user, follow thread" />
     <MESSAGE value="load thread followed" />
     <MESSAGE value="," />
-    <option name="LAST_COMMIT_MESSAGE" value="," />
+    <MESSAGE value="." />
+    <MESSAGE value="update database" />
+    <option name="LAST_COMMIT_MESSAGE" value="update database" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Prn231_Project/Controllers/PostController.cs</url>
+          <line>44</line>
+          <properties documentPath="C:\Users\PC\Documents\GitHub\Prn231_Project\Prn231_Project\Controllers\PostController.cs" initialLine="44" containingFunctionPresentation="Method 'Put'">
+            <startOffsets>
+              <option value="1248" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1281" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/BusinessObject/Repositories/Implementation/PostRepository.cs</url>
+          <line>28</line>
+          <properties documentPath="C:\Users\PC\Documents\GitHub\Prn231_Project\BusinessObject\Repositories\Implementation\PostRepository.cs" initialLine="28" containingFunctionPresentation="Method 'Update'">
+            <startOffsets>
+              <option value="656" />
+            </startOffsets>
+            <endOffsets>
+              <option value="682" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Type#DataAccess.Models.Post" memberName="Replies" />
