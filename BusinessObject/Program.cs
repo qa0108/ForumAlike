@@ -21,5 +21,6 @@ class Program
         serviceCollection.AddScoped<RoleDAO>();
         serviceCollection.AddScoped<ThreadDAO>();
         serviceCollection.AddScoped<UserDAO>();
+        serviceCollection.AddScoped<FollowThreadDAO>();
     }
 }

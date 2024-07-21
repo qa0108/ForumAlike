@@ -34,7 +34,7 @@ namespace Prn231_Project
                         ValidateAudience         = false
                     };
                 });
-            
+
             // Add services to the container.
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
@@ -58,6 +58,7 @@ namespace Prn231_Project
             builder.Services.AddScoped<IRoleRepository, RoleRepository>();
             builder.Services.AddScoped<IThreadRepository, ThreadRepository>();
             builder.Services.AddScoped<IUserRepository, UserRepository>();
+            builder.Services.AddScoped<IFollowThreadRepository, FollowThreadRepository>();
 
             // Add OData services
             builder.Services.AddControllers().AddOData(opt =>
@@ -90,9 +91,9 @@ namespace Prn231_Project
                 options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
                 // Add any other necessary configuration as per your requirements
             });
-            
+
             builder.Services.AddScoped<UserService>();
-            
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -102,7 +103,7 @@ namespace Prn231_Project
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
-            
+
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
