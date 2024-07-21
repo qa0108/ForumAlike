@@ -9,6 +9,20 @@ public class PostService
 
     public PostService(HttpClient httpClient) { this.httpClient = httpClient; }
 
+    public async Task<List<Post>?> GetAllPosts()
+    {
+        var response = await this.httpClient.GetAsync("http://localhost:5000/api/Post");
+
+        if (response.IsSuccessStatusCode)
+        {
+            var jsonResponse = await response.Content.ReadAsStringAsync();
+            var posts        = JsonConvert.DeserializeObject<List<Post>>(jsonResponse);
+            return posts;
+        }
+
+        return null;
+    }
+    
     public async Task<List<Thread>> GetThreadsAsync()
     {
         var response = await httpClient.GetAsync("http://localhost:5000/api/Thread");

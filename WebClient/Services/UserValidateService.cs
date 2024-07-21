@@ -48,6 +48,14 @@ public class UserValidateService
         return userId != null;
     }
 
+    public bool IsAdmin()
+    {
+        var claimPrincipal = this.GetClaimPrincipal();
+        var roleId         = claimPrincipal?.FindFirst(ClaimTypes.Role)?.Value;
+        if (roleId == null) return false;
+        return int.Parse(roleId) == 1;
+    }
+
     public int? GetUserId()
     {
         var userId = GetClaimPrincipal()?.FindFirst(ClaimTypes.NameIdentifier)?.Value;

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XuVBNcPEFo4/3fpHjVUm/AUdiVdQFUL1O0XllFaQxTc=",
+  "Hash": "kU6XwtJogu5TKCqTxaS6NOXbco+4FPwquk4ylh5J4Mc=",
   "Source": "WebClient",
   "BasePath": "_content/WebClient",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\PC\\Documents\\GitHub\\Prn231_Project\\WebClient\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\WebClient.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Documents\\GitHub\\Prn231_Project\\WebClient\\wwwroot\\css\\adminhome.css",
+      "SourceId": "WebClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Documents\\GitHub\\Prn231_Project\\WebClient\\wwwroot\\",
+      "BasePath": "_content/WebClient",
+      "RelativePath": "css/adminhome.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\adminhome.css"
     },
     {
       "Identity": "C:\\Users\\PC\\Documents\\GitHub\\Prn231_Project\\WebClient\\wwwroot\\css\\PostDetail.css",

@@ -3,6 +3,7 @@ namespace DataAccess.DAOs
     using DataAccess.Models;
     using System.Collections.Generic;
     using System.Linq;
+    using Microsoft.EntityFrameworkCore;
 
     public class UserDAO
     {
@@ -44,6 +45,9 @@ namespace DataAccess.DAOs
             }
         }
 
-        public List<User> GetAll() { return context.Users.ToList(); }
+        public List<User> GetAll() { return context.Users
+            .Include(u => u.Role)
+            .Include(u => u.Posts)
+            .ToList(); }
     }
 }

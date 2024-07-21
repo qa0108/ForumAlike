@@ -3,6 +3,7 @@ namespace DataAccess.DAOs
     using DataAccess.Models;
     using System.Collections.Generic;
     using System.Linq;
+    using Microsoft.EntityFrameworkCore;
 
     public class PostDAO
     {
@@ -21,7 +22,10 @@ namespace DataAccess.DAOs
 
         public Post? GetById(int id)
         {
-            return context.Posts.Find(id);
+            return context.Posts
+                .Include(p => p.User)
+                .Include(p => p.Replies)
+                .FirstOrDefault(p => p.PostId == id);
         }
 
         public void Update(Post post)
@@ -42,7 +46,10 @@ namespace DataAccess.DAOs
 
         public List<Post> GetAll()
         {
-            return this.context.Posts.ToList();
+            return this.context.Posts
+                .Include(p => p.User)
+                .Include(p => p.Replies)
+                .ToList();
         }
     }
 }

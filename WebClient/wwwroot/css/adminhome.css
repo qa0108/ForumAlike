@@ -1,0 +1,19 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Optional: for styling */
+}
+
+td, th {
+    padding: 8px;
+    text-align: left;
+}
+
+table, th, td {
+    border: 1px solid black;
+}

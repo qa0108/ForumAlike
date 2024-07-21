@@ -1,0 +1,71 @@
+@using DataAccess.Models
+
+@{
+    ViewData["Title"] = "Profile";
+    var users = ViewBag.Users as List<User>;
+    var posts = ViewBag.Posts as List<Post>;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Administrator</title>
+    <link rel="stylesheet" href="~/css/adminhome.css" asp-append-version="true"/>
+</head>
+<body>
+<div>
+    <h2>Admin Home</h2>
+    <nav>
+        <ul style="list-style: none; padding: 0;">
+            <li style="display: inline; margin-right: 10px;">
+                <a href="/Home/Admin/?option=0" class="plain-text-link">Posts</a>
+            </li>
+            <li style="display: inline; margin-right: 10px;">
+                <a href="/Home/Admin/?option=1" class="plain-text-link">Users</a>
+            </li>
+        </ul>
+    </nav>
+
+    @if (posts != null && posts.Any())
+    {
+        @foreach (var post in posts)
+        {
+            <a href="/Post/Detail/?postId=@post.PostId" class="plain-text-link">
+                <h3 class="font-weight-bold">@post.Title</h3>
+            </a>
+            <p>@post.Content</p>
+        }
+    }
+
+    <div>
+        @if (users != null && users.Any())
+        {
+            <table>
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Role</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>CreateDate</th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (User user in users)
+                {
+                    <tr>
+                        <td>@user.UserId</td>
+                        <td>@user.Role?.RoleName</td>
+                        <td>@user.UserName</td>
+                        <td>@user.Email</td>
+                        <td>@(((DateTime)user.CreatedAt).ToString("yyyy-MM-dd"))</td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        }
+    </div>
+</div>
+</body>
+</html>

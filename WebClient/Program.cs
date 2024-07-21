@@ -17,6 +17,7 @@ namespace WebClient
             builder.Services.AddScoped<UserValidateService>();
             builder.Services.AddScoped<PostService>();
             builder.Services.AddScoped<ReplyService>();
+            builder.Services.AddScoped<UserService>();
 
             var app = builder.Build();
 
@@ -25,6 +26,7 @@ namespace WebClient
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
             app.UseStaticFiles();
 
             app.UseRouting();

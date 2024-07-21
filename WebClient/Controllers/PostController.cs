@@ -98,14 +98,14 @@ namespace WebClient.Controllers
         public async Task<IActionResult> Detail(int postId)
         {
             this.ViewBag.IsAuthenticated = this.userValidateService.IsUserAuthenticated();
+            this.ViewBag.IsAdmin         = this.userValidateService.IsAdmin();
             var response = await this.httpClient.GetAsync($"http://localhost:5000/api/Post/{postId}");
             this.ViewBag.Comments = await this.GetCommentsOnPost(postId);
-            
 
             if (response.IsSuccessStatusCode)
             {
                 var jsonResponse = await response.Content.ReadAsStringAsync();
-                var post        = JsonConvert.DeserializeObject<Post>(jsonResponse);
+                var post         = JsonConvert.DeserializeObject<Post>(jsonResponse);
                 this.ViewBag.Post = post;
                 var claimsPrincipal = this.userValidateService.GetClaimPrincipal();
                 if (claimsPrincipal != null && post != null)
@@ -113,6 +113,7 @@ namespace WebClient.Controllers
                     var userId = claimsPrincipal.FindFirst(ClaimTypes.NameIdentifier)?.Value;
                     this.ViewBag.IsOwner = userId != null && post.UserId == int.Parse(userId);
                 }
+
                 return this.View();
             }
 
@@ -133,7 +134,7 @@ namespace WebClient.Controllers
 
             return null;
         }
-        
+
         public async Task<List<Post>?> GetPostByUserId(int userId)
         {
             var response = await this.httpClient.GetAsync("http://localhost:5000/api/Post");
@@ -147,7 +148,7 @@ namespace WebClient.Controllers
 
             return null;
         }
-        
+
         [HttpPost]
         public async Task<IActionResult> AddComment(Reply reply)
         {
@@ -155,13 +156,13 @@ namespace WebClient.Controllers
             if (claimsPrincipal == null)
             {
                 this.ViewBag.AddCommentErrorMessage = "Please log in to comment";
-                return this.RedirectToAction("Detail", "Post", new {postId = reply.PostId});
+                return this.RedirectToAction("Detail", "Post", new { postId = reply.PostId });
             }
-            
+
             reply.CreatedAt = DateTime.Now;
-            var userId          = claimsPrincipal?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            var userId = claimsPrincipal?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             reply.UserId = int.Parse(userId);
-            
+
             var jsonContent = JsonConvert.SerializeObject(reply);
             var content     = new StringContent(jsonContent, Encoding.UTF8, "application/json");
 
@@ -171,8 +172,8 @@ namespace WebClient.Controllers
             {
                 this.ViewBag.AddCommentErrorMessage = "There is something wrong while adding comment";
             }
-            
-            return this.RedirectToAction("Detail", "Post", new {postId = reply.PostId});
+
+            return this.RedirectToAction("Detail", "Post", new { postId = reply.PostId });
         }
 
         [HttpGet]
@@ -191,14 +192,15 @@ namespace WebClient.Controllers
                 {
                     var userId  = claimsPrincipal.FindFirst(ClaimTypes.NameIdentifier)?.Value;
                     var isOwner = post.UserId == int.Parse(userId);
-                    if(!isOwner) return this.RedirectToAction("Detail", new { postId });
+                    if (!isOwner) return this.RedirectToAction("Detail", new { postId });
                 }
+
                 return this.View();
             }
-            
+
             return this.RedirectToAction("Detail", new { postId });
         }
-        
+
         [HttpPost]
         public async Task<IActionResult> Modify(Post updatedPost)
         {
@@ -259,24 +261,24 @@ namespace WebClient.Controllers
             }
 
             var userId = claimsPrincipal.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            // Optionally, check if the user is authorized to delete the post
-            var post    = await this.GetPostById(postId);
-            if(post==null) return RedirectToAction("Index", "Home");
+            var post   = await this.GetPostById(postId);
+            if (post == null) return RedirectToAction("Index", "Home");
             var isOwner = post.UserId == int.Parse(userId);
-            if(!isOwner) return this.RedirectToAction("Detail", new { postId });
+            var isAdmin = this.userValidateService.IsAdmin();
+            if (!isOwner && !isAdmin) return this.RedirectToAction("Detail", new { postId });
 
             var response = await httpClient.DeleteAsync($"http://localhost:5000/api/Post/{postId}");
 
             if (response.IsSuccessStatusCode)
             {
-                return RedirectToAction("Index", "Home"); // Redirect to home or a confirmation page
+                return this.Ok(); // Redirect to home or a confirmation page
             }
             else
             {
                 return View("Error"); // Show an error page or message
             }
         }
-        
+
         public async Task<Post?> GetPostById(int postId)
         {
             var response = await httpClient.GetAsync($"http://localhost:5000/api/Post/{postId}");
@@ -286,6 +288,7 @@ namespace WebClient.Controllers
                 var post         = JsonConvert.DeserializeObject<Post>(jsonResponse);
                 return post;
             }
+
             return null;
         }
     }
