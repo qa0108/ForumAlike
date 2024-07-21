@@ -11,27 +11,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4764b45-f9b0-4abf-96c6-fcb109f4f8fe" name="Changes" comment="promote demote user, follow thread">
-      <change afterPath="$PROJECT_DIR$/WebClient/wwwroot/css/home.css" afterDir="false" />
+    <list default="true" id="c4764b45-f9b0-4abf-96c6-fcb109f4f8fe" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Prn231_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Prn231_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessObject/DAOs/FollowThreadDAO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/DAOs/FollowThreadDAO.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessObject/Repositories/Implementation/FollowThreadRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/Repositories/Implementation/FollowThreadRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BusinessObject/Repositories/Interfaces/IFollowThreadRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BusinessObject/Repositories/Interfaces/IFollowThreadRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Prn231_Project/Controllers/FollowThreadController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Prn231_Project/Controllers/FollowThreadController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/Services/UserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Services/UserService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebClient/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Views/Home/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Views/Shared/_Layout.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.staticwebassets.runtime.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.staticwebassets.runtime.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/ref/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/ref/WebClient.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/refint/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/refint/WebClient.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/staticwebassets.build.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/staticwebassets.build.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/staticwebassets.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/staticwebassets.development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/staticwebassets.pack.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/staticwebassets.pack.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/staticwebassets/msbuild.WebClient.Microsoft.AspNetCore.StaticWebAssets.props" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/staticwebassets/msbuild.WebClient.Microsoft.AspNetCore.StaticWebAssets.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/wwwroot/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/wwwroot/css/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/wwwroot/css/site.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -305,7 +294,8 @@
       <workItem from="1721463609463" duration="5224000" />
       <workItem from="1721481959322" duration="14402000" />
       <workItem from="1721537796998" duration="10768000" />
-      <workItem from="1721556058585" duration="9989000" />
+      <workItem from="1721556058585" duration="10186000" />
+      <workItem from="1721573485057" duration="2017000" />
     </task>
     <task id="LOCAL-00001" summary="add gitignore">
       <option name="closed" value="true" />
@@ -475,7 +465,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721568768923</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="load thread followed">
+      <option name="closed" value="true" />
+      <created>1721571208627</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1721571208627</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -515,39 +513,10 @@
     <MESSAGE value="update models" />
     <MESSAGE value="add follow thread" />
     <MESSAGE value="promote demote user, follow thread" />
-    <option name="LAST_COMMIT_MESSAGE" value="promote demote user, follow thread" />
+    <MESSAGE value="load thread followed" />
+    <option name="LAST_COMMIT_MESSAGE" value="load thread followed" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/WebClient/Services/UserService.cs</url>
-          <line>48</line>
-          <properties documentPath="C:\Users\PC\Documents\GitHub\Prn231_Project\WebClient\Services\UserService.cs" initialLine="48" containingFunctionPresentation="Method 'GetFollowThreads'">
-            <startOffsets>
-              <option value="1545" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1576" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/WebClient/Services/UserService.cs</url>
-          <line>47</line>
-          <properties documentPath="C:\Users\PC\Documents\GitHub\Prn231_Project\WebClient\Services\UserService.cs" initialLine="47" containingFunctionPresentation="Method 'GetFollowThreads'">
-            <startOffsets>
-              <option value="1444" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1532" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Type#DataAccess.Models.Post" memberName="Replies" />

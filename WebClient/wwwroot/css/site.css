@@ -1,64 +1,68 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 }
 
 .div-spacing {
-  margin-right: 5px;
-  margin-left: 5px;
-  position: relative;
-  z-index: 1;
+    margin-right: 5px;
+    margin-left: 5px;
+    position: relative;
+    z-index: 1;
 }
 
 .plain-text-link {
-  color: inherit; /* Make the link color the same as the surrounding text */
-  text-decoration: none; /* Remove underline */
-  cursor: default; /* Optional: change the cursor to default instead of pointer */
+    color: inherit; /* Make the link color the same as the surrounding text */
+    text-decoration: none; /* Remove underline */
+    cursor: default; /* Optional: change the cursor to default instead of pointer */
 }
 
 .no-bullets {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 .title-actions-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .div-spacing {
-  /* Ensure there's no overflow: hidden; that might clip the menu */
+    /* Ensure there's no overflow: hidden; that might clip the menu */
 }
 
 .profile-menu {
-  display: none; /* Hidden by default */
-  position: fixed; /* Keep it fixed on scroll */
-  top: 60px; /* Adjust this value based on the actual height of your navbar */
-  right: 0; /* Align to the left side of the viewport */
-  width: 160px; /* Optional: Adjust the width as needed */
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1050; /* Ensure it's above most other content */
+    display: none; /* Hidden by default */
+    position: fixed; /* Keep it fixed on scroll */
+    top: 60px; /* Adjust this value based on the actual height of your navbar */
+    right: 0; /* Align to the left side of the viewport */
+    width: 160px; /* Optional: Adjust the width as needed */
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1050; /* Ensure it's above most other content */
 }
 
 .profile-menu a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.border-vertical {
+    border-top: 1px solid;
 }
