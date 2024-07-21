@@ -20,30 +20,30 @@
             }
         </ul>
     </div>
+</div>
 
-    <div class="post-list">
-        @if (posts != null && posts.Any())
-        {
-            <ul>
-                @foreach (var post in posts)
-                {
-                    <li class="no-bullets border-vertical">
-                        <a href="/Thread/Detail/?threadId=@post.ThreadId" class="plain-text-link">
-                            <p>t/@post.Thread.Title</p>
-                        </a>
-                        <a href="/Post/Detail/?postId=@post.PostId" class="plain-text-link">
-                            <h3 class="font-weight-bold">@post.Title</h3>
-                        </a>
-                        <p>@post.Content</p>
-                    </li>
-                }
-            </ul>
-        }
-        else
-        {
-            <p>No posts available.</p>
-        }
-    </div>
+<div class="post-list">
+    @if (posts != null && posts.Any())
+    {
+        <ul>
+            @foreach (var post in posts)
+            {
+                <li class="no-bullets border-vertical">
+                    <a href="/Thread/Detail/?threadId=@post.ThreadId" class="plain-text-link">
+                        <p>t/@post.Thread.Title</p>
+                    </a>
+                    <a href="/Post/Detail/?postId=@post.PostId" class="plain-text-link">
+                        <h3 class="font-weight-bold">@post.Title</h3>
+                    </a>
+                    <p>@post.Content</p>
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>No posts available.</p>
+    }
 </div>
 
 </body>

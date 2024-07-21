@@ -11,16 +11,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4764b45-f9b0-4abf-96c6-fcb109f4f8fe" name="Changes" comment="">
+    <list default="true" id="c4764b45-f9b0-4abf-96c6-fcb109f4f8fe" name="Changes" comment=",">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Prn231_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Prn231_Project/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebClient/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Views/Home/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Views/Shared/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/wwwroot/css/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/wwwroot/css/home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/wwwroot/css/site.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,7 +288,7 @@
       <workItem from="1721481959322" duration="14402000" />
       <workItem from="1721537796998" duration="10768000" />
       <workItem from="1721556058585" duration="10186000" />
-      <workItem from="1721573485057" duration="2017000" />
+      <workItem from="1721573485057" duration="2366000" />
     </task>
     <task id="LOCAL-00001" summary="add gitignore">
       <option name="closed" value="true" />
@@ -473,7 +466,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721571208627</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary=",">
+      <option name="closed" value="true" />
+      <created>1721580653920</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1721580653920</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -514,7 +515,8 @@
     <MESSAGE value="add follow thread" />
     <MESSAGE value="promote demote user, follow thread" />
     <MESSAGE value="load thread followed" />
-    <option name="LAST_COMMIT_MESSAGE" value="load thread followed" />
+    <MESSAGE value="," />
+    <option name="LAST_COMMIT_MESSAGE" value="," />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
