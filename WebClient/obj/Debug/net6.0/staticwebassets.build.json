@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kU6XwtJogu5TKCqTxaS6NOXbco+4FPwquk4ylh5J4Mc=",
+  "Hash": "XBZB1SIDxML2vKL+pT5qTmzcoJ5PELHp2MYL+J1HzTA=",
   "Source": "WebClient",
   "BasePath": "_content/WebClient",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\adminhome.css"
+    },
+    {
+      "Identity": "C:\\Users\\PC\\Documents\\GitHub\\Prn231_Project\\WebClient\\wwwroot\\css\\home.css",
+      "SourceId": "WebClient",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\PC\\Documents\\GitHub\\Prn231_Project\\WebClient\\wwwroot\\",
+      "BasePath": "_content/WebClient",
+      "RelativePath": "css/home.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\home.css"
     },
     {
       "Identity": "C:\\Users\\PC\\Documents\\GitHub\\Prn231_Project\\WebClient\\wwwroot\\css\\PostDetail.css",

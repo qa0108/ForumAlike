@@ -9,12 +9,13 @@ public class FollowThreadDAO
 
     public FollowThreadDAO(ForumDBContext context) { this.context = context; }
 
-    public FollowThread GetFollowThreadByUserId(int userId)
+    public List<FollowThread> GetFollowThreadByUserId(int userId)
     {
         return this.context.FollowThreads
             .Include(ft => ft.Thread)
             .Include(ft => ft.User)
-            .FirstOrDefault(ft => ft.UserId == userId);
+            .Where(ft => ft.UserId == userId)
+            .ToList();
     }
 
     public List<FollowThread> GetAllFollowThreads()

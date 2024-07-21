@@ -31,7 +31,7 @@ public class FollowThreadRepository : IFollowThreadRepository
 
     public FollowThread GetById(int userId)
     {
-        return this.followThreadDao.GetFollowThreadByUserId(userId);
+        return null;
     }
 
     public FollowThread Update(FollowThread followThread)
@@ -40,7 +40,7 @@ public class FollowThreadRepository : IFollowThreadRepository
         return followThread;
     }
 
-    public FollowThread GetFollowThreadByUserId(int userId)
+    public List<FollowThread> GetFollowThreadByUserId(int userId)
     {
         return this.followThreadDao.GetFollowThreadByUserId(userId);
     }

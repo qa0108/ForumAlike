@@ -1,31 +1,49 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
-    var posts = ViewBag.Posts as List<DataAccess.Models.Post>;
+    var posts         = ViewBag.Posts as List<DataAccess.Models.Post>;
+    var followThreads = ViewBag.FollowThreads as List<DataAccess.Models.FollowThread>;
 }
-
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true"/>
+</head>
 <body>
-<h1>All Posts</h1>
+<div style="display: flex;">
+    <div class="left-scroll-view">
+        <ul>
+            @if (followThreads != null && followThreads.Any())
+            {
+                @foreach (var followThread in followThreads)
+                {
+                    <li class="no-bullets">@followThread.Thread.Title</li>
+                }
+            }
+        </ul>
+    </div>
 
-@if (posts != null && posts.Any())
-{
-    <ul>
-        @foreach (var post in posts)
+    <div class="post-list">
+        @if (posts != null && posts.Any())
         {
-            <li class="no-bullets">
-                <a href="/Thread/Detail/?threadId=@post.ThreadId" class="plain-text-link">
-                    <p>t/@post.Thread.Title</p>
-                </a>
-                <a href="/Post/Detail/?postId=@post.PostId" class="plain-text-link">
-                    <h3 class="font-weight-bold">@post.Title</h3>
-                </a>
-                <p>@post.Content</p>
-            </li>
+            <ul>
+                @foreach (var post in posts)
+                {
+                    <li class="no-bullets">
+                        <a href="/Thread/Detail/?threadId=@post.ThreadId" class="plain-text-link">
+                            <p>t/@post.Thread.Title</p>
+                        </a>
+                        <a href="/Post/Detail/?postId=@post.PostId" class="plain-text-link">
+                            <h3 class="font-weight-bold">@post.Title</h3>
+                        </a>
+                        <p>@post.Content</p>
+                    </li>
+                }
+            </ul>
         }
-    </ul>
-}
-else
-{
-    <p>No posts available.</p>
-}
+        else
+        {
+            <p>No posts available.</p>
+        }
+    </div>
+</div>
 
 </body>

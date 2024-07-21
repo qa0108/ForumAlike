@@ -32,6 +32,10 @@
                 {
                     return this.RedirectToAction("Index", "Admin");
                 }
+
+                var userId        = claimsPrincipal.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                var followThreads = await this.userService.GetFollowThreads(int.Parse(userId));
+                this.ViewBag.FollowThreads = followThreads;
             }
 
             this.ViewBag.IsAuthenticated = this.userValidateService.IsUserAuthenticated();

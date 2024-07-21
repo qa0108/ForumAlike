@@ -38,6 +38,20 @@ public class UserService
         return null;
     }
 
+    public async Task<List<FollowThread>?> GetFollowThreads(int userId)
+    {
+        var response = await this.httpClient.GetAsync($"http://localhost:5000/api/FollowThread/GetByUser/{userId}");
+
+        if (response.IsSuccessStatusCode)
+        {
+            var jsonResponse = await response.Content.ReadAsStringAsync();
+            var followThreads         = JsonConvert.DeserializeObject<FollowThread[]>(jsonResponse);
+            return followThreads?.ToList();
+        }
+
+        return null;
+    }
+
     public async Task Promote(int userId)
     {
         var user = await this.GetUserById(userId);

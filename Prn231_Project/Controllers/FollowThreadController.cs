@@ -24,7 +24,7 @@ public class FollowThreadController : ControllerBase
         return Ok(followThreads);
     }
 
-    [HttpGet("{userId}")]
+    [HttpGet("GetByUser/{userId}")]
     public IActionResult GetById(int userId)
     {
         var followThread = this.followThreadRepository.GetFollowThreadByUserId(userId);

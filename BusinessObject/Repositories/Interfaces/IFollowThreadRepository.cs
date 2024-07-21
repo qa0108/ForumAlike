@@ -6,8 +6,8 @@ public interface IFollowThreadRepository
 {
     FollowThread       GetById(int followId);
     List<FollowThread> GetAll();
-    void       Add(int userId, int threadId);
+    void               Add(int userId, int threadId);
     FollowThread       Update(FollowThread followThread);
     void               Delete(int userId, int threadId);
-    FollowThread       GetFollowThreadByUserId(int userId);
+    List<FollowThread>             GetFollowThreadByUserId(int userId);
 }
