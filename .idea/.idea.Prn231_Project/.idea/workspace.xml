@@ -11,9 +11,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4764b45-f9b0-4abf-96c6-fcb109f4f8fe" name="Changes" comment="search">
+    <list default="true" id="c4764b45-f9b0-4abf-96c6-fcb109f4f8fe" name="Changes" comment="fix reply">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Prn231_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Prn231_Project/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebClient/Views/Post/Detail.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Views/Post/Detail.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/Controllers/PostController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Controllers/PostController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Views/Home/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/Views/User/Login.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Views/User/Login.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/Views/User/Register.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/Views/User/Register.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/bin/Debug/net6.0/WebClient.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebClient/obj/Debug/net6.0/WebClient.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -291,7 +298,7 @@
       <workItem from="1721573485057" duration="2366000" />
       <workItem from="1721584819317" duration="902000" />
       <workItem from="1721585735723" duration="5672000" />
-      <workItem from="1721613780504" duration="2550000" />
+      <workItem from="1721613780504" duration="3519000" />
     </task>
     <task id="LOCAL-00001" summary="add gitignore">
       <option name="closed" value="true" />
@@ -509,7 +516,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721616071342</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="fix reply">
+      <option name="closed" value="true" />
+      <created>1721616490163</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1721616490163</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -529,7 +544,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="add everything" />
     <MESSAGE value="add gitignore" />
     <MESSAGE value="add DAOs and Repositories&#10;remove Models in WebApi project" />
     <MESSAGE value="add odata" />
@@ -554,7 +568,8 @@
     <MESSAGE value="update database" />
     <MESSAGE value="fix" />
     <MESSAGE value="search" />
-    <option name="LAST_COMMIT_MESSAGE" value="search" />
+    <MESSAGE value="fix reply" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix reply" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -15,7 +15,9 @@
             {
                 @foreach (var followThread in followThreads)
                 {
-                    <li class="no-bullets">t/@followThread.Thread.Title</li>
+                    <li class="no-bullets">
+                        <a class="plain-text-link" href="/Thread/Detail/?threadId=@followThread.ThreadId">t/@followThread.Thread.Title</a>
+                    </li>
                 }
             }
         </ul>

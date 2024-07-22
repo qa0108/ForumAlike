@@ -42,7 +42,7 @@ namespace WebClient.Controllers
         public async Task<IActionResult> Create(Post newPost)
         {
             this.ViewBag.IsAuthenticated = this.userValidateService.IsUserAuthenticated();
-            if (newPost.ThreadId == 0)
+            if (newPost.ThreadId == 0 || newPost.ThreadId == null)
             {
                 return this.RedirectToAction("Create", new { message = "Select a thread" });
             }
@@ -60,9 +60,11 @@ namespace WebClient.Controllers
             {
                 return this.RedirectToAction("Index", "Home");
             }
-
-
-            return this.View("Error");
+            else
+            {
+                var errorMessage = await response.Content.ReadAsStringAsync();
+                return this.RedirectToAction("Create", new { message = errorMessage });
+            }
         }
 
 

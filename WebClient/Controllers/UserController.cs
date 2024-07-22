@@ -76,7 +76,7 @@
                 return this.RedirectToAction("Login");
             }
 
-            return this.RedirectToAction("RegisterPost");
+            return this.RedirectToAction("Register");
         }
 
         [HttpGet]
@@ -181,7 +181,7 @@
             {
                 using (var res = await this.httpClient.PostAsJsonAsync(link, user))
                 {
-                    if (res.StatusCode == HttpStatusCode.OK)
+                    if (res.IsSuccessStatusCode)
                     {
                         return true;
                     }

@@ -4,7 +4,7 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-    Layout = null;
+    Layout = "_Layout";
 }
 
 @model DataAccess.Models.User
@@ -53,9 +53,7 @@
                             </form>
 
                             <br />
-                            <a href="Forgot.jsp" class="forgot-password-link">Quên mật khẩu?</a>
-                            <br />
-                            <p>Bạn đã có tài khoản? <a asp-controller="User" asp-action="Login" style="color: #0D6EFD">Đăng nhập đây</a></p>
+                            <p>Already registered? <a asp-controller="User" asp-action="Login" style="color: #0D6EFD">Login</a></p>
                         </div>
                     </div>
                 </div>
