@@ -1,0 +1,66 @@
+@{
+    ViewBag.Title = "title";
+    Layout        = "_Layout";
+    var posts   = ViewBag.Posts as List<DataAccess.Models.Post>;
+    var users   = ViewBag.Users as List<DataAccess.Models.User>;
+    var threads = ViewBag.Threads as List<DataAccess.Models.Thread>;
+}
+
+<div>
+    <div>
+        <h3>Search for: @ViewBag.SearchContent</h3>
+    </div>
+    <div style="margin-bottom: 10px; margin-top: 20px">
+        @if (threads != null && threads.Any())
+        {
+            <h4>Threads found:</h4>
+            @foreach (var thread in threads)
+            {
+                <a class="no-bullets" href="/Thread/Detail/?threadId=@thread.ThreadId">
+                    <strong>t/@thread.Title</strong>
+                </a>
+            }
+        }
+    </div>
+
+    <div  style="margin-bottom: 10px; margin-top: 20px">
+        @if (users != null && users.Any())
+        {
+            <h4>Users found:</h4>
+            @foreach (var user in users)
+            {
+                <a class="no-bullets">
+                    <p>u/@user.UserName</p>
+                </a>
+            }
+        }
+    </div>
+    <div  style="margin-bottom: 10px; margin-top: 20px">
+        @if (posts != null && posts.Any())
+        {
+            <h4>Posts found:</h4>
+            <ul>
+                @foreach (var post in posts)
+                {
+                    <li class="no-bullets border-vertical">
+                        <a href="/Thread/Detail/?threadId=@post.ThreadId" class="plain-text-link">
+                            <p>t/@post.Thread.Title</p>
+                        </a>
+                        <a href="/Post/Detail/?postId=@post.PostId" class="plain-text-link">
+                            <h3 class="font-weight-bold">@post.Title</h3>
+                        </a>
+                        <p>@post.Content</p>
+                    </li>
+                }
+            </ul>
+        }
+    </div>
+    <div>
+        @if ((posts == null || posts.Count == 0) 
+             && (users == null || users.Count == 0)
+             && (threads == null || threads.Count == 0))
+        {
+            <p>No content found</p>
+        }
+    </div>
+</div>

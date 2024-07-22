@@ -9,6 +9,15 @@ public class ThreadService
 
     public ThreadService(HttpClient httpClient) { this.httpClient = httpClient; }
 
+    public async Task<List<Thread>?> GetAllThreads()
+    {
+        var response = await httpClient.GetAsync($"http://localhost:5000/api/Thread/");
+        if (!response.IsSuccessStatusCode) return null;
+        var json   = await response.Content.ReadAsStringAsync();
+        var thread = JsonConvert.DeserializeObject<List<Thread>>(json);
+        return thread;
+    }
+    
     public async Task<Thread?> GetThreadById(int threadId)
     {
         var response = await httpClient.GetAsync($"http://localhost:5000/api/Thread/{threadId}");
