@@ -8,7 +8,7 @@
 
 <div>
     <div>
-        <h3>Search for: @ViewBag.SearchContent</h3>
+        <h3>Search results for: @ViewBag.SearchContent</h3>
     </div>
     <div style="margin-bottom: 10px; margin-top: 20px">
         @if (threads != null && threads.Any())
@@ -16,8 +16,8 @@
             <h4>Threads found:</h4>
             @foreach (var thread in threads)
             {
-                <a class="no-bullets" href="/Thread/Detail/?threadId=@thread.ThreadId">
-                    <strong>t/@thread.Title</strong>
+                <a class="plain-text-link" href="/Thread/Detail/?threadId=@thread.ThreadId">
+                    <p>t/@thread.Title</p>
                 </a>
             }
         }
